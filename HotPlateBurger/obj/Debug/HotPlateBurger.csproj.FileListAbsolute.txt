@@ -1,0 +1,9 @@
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\bin\Debug\HotPlateBurger.exe.config
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\bin\Debug\HotPlateBurger.exe
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\bin\Debug\HotPlateBurger.pdb
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\obj\Debug\HotPlateBurger.csproj.AssemblyReference.cache
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\obj\Debug\HotPlateBurger.Properties.Resources.resources
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\obj\Debug\HotPlateBurger.csproj.GenerateResource.cache
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\obj\Debug\HotPlateBurger.csproj.CoreCompileInputs.cache
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\obj\Debug\HotPlateBurger.exe
+C:\Users\Syste\RiderProjects\HotPlateBurger\HotPlateBurger\obj\Debug\HotPlateBurger.pdb
