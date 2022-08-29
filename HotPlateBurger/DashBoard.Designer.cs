@@ -94,6 +94,7 @@ namespace HotPlateBurger
             this.burgerButton.TabIndex = 1;
             this.burgerButton.Text = "Burgers";
             this.burgerButton.UseVisualStyleBackColor = true;
+            this.burgerButton.Click += new System.EventHandler(this.burgerButton_Click);
             // 
             // chickenButton
             // 
