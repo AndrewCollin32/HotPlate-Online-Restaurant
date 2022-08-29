@@ -9,5 +9,6 @@ namespace HotPlateBurger
         {
             InitializeComponent();
         }
+        
     }
 }

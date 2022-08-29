@@ -50,38 +50,38 @@ namespace HotPlateBurger
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 282);
+            this.panel1.Size = new System.Drawing.Size(270, 255);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 248);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 224);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // nameItem
             // 
-            this.nameItem.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameItem.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameItem.ForeColor = System.Drawing.Color.White;
-            this.nameItem.Location = new System.Drawing.Point(3, 0);
+            this.nameItem.Location = new System.Drawing.Point(6, 8);
             this.nameItem.Name = "nameItem";
-            this.nameItem.Size = new System.Drawing.Size(322, 55);
+            this.nameItem.Size = new System.Drawing.Size(262, 33);
             this.nameItem.TabIndex = 1;
             this.nameItem.Text = "Classic Cheese Burger";
             this.nameItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // priceItem
             // 
-            this.priceItem.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceItem.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.priceItem.Location = new System.Drawing.Point(3, 52);
+            this.priceItem.Location = new System.Drawing.Point(5, 46);
             this.priceItem.Name = "priceItem";
-            this.priceItem.Size = new System.Drawing.Size(132, 67);
+            this.priceItem.Size = new System.Drawing.Size(93, 37);
             this.priceItem.TabIndex = 2;
             this.priceItem.Text = "$4.30";
             this.priceItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,9 +93,9 @@ namespace HotPlateBurger
             this.panel2.Controls.Add(this.addButton);
             this.panel2.Controls.Add(this.priceItem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 282);
+            this.panel2.Location = new System.Drawing.Point(0, 255);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 119);
+            this.panel2.Size = new System.Drawing.Size(270, 97);
             this.panel2.TabIndex = 1;
             // 
             // addButton
@@ -106,7 +106,7 @@ namespace HotPlateBurger
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.addButton.Location = new System.Drawing.Point(141, 58);
+            this.addButton.Location = new System.Drawing.Point(100, 41);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(165, 50);
             this.addButton.TabIndex = 3;
@@ -121,7 +121,7 @@ namespace HotPlateBurger
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Widget";
-            this.Size = new System.Drawing.Size(322, 401);
+            this.Size = new System.Drawing.Size(270, 352);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
