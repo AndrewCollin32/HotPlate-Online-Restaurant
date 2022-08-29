@@ -1,21 +1,23 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace HotPlateBurger
 {
     public partial class DashBoard : UserControl
     {
+
+        public static Button previousButton;
         public DashBoard()
         {
             InitializeComponent();
+            previousButton = allButton;
+            loadForm(new AllFrame());
         }
 
         public void loadForm(Object form)
         {
-            if (panel2.Controls.Count > 0)
-            {
-                panel2.Controls.RemoveAt(0);
-            }
+            panel2.Controls.Clear();
 
             Form f = form as Form;
             f.TopLevel = false;
@@ -27,12 +29,18 @@ namespace HotPlateBurger
 
         private void allButton_Click(object sender, EventArgs e)
         {
+            previousButton.BackColor = Color.Coral;
+            allButton.BackColor = Color.SandyBrown;
             loadForm(new AllFrame());
+            previousButton = allButton;
         }
 
         private void burgerButton_Click(object sender, EventArgs e)
         {
+            previousButton.BackColor = Color.Coral;
+            burgerButton.BackColor = Color.SandyBrown;
             loadForm(new BurgerFrame());
+            previousButton = burgerButton;
         }
     }
 }

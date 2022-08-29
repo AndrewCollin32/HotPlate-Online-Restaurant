@@ -66,6 +66,7 @@ namespace HotPlateBurger
             // 
             // allButton
             // 
+            this.allButton.BackColor = System.Drawing.Color.SandyBrown;
             this.allButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.allButton.FlatAppearance.BorderSize = 0;
             this.allButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -77,7 +78,7 @@ namespace HotPlateBurger
             this.allButton.Size = new System.Drawing.Size(234, 68);
             this.allButton.TabIndex = 0;
             this.allButton.Text = "All";
-            this.allButton.UseVisualStyleBackColor = true;
+            this.allButton.UseVisualStyleBackColor = false;
             this.allButton.Click += new System.EventHandler(this.allButton_Click);
             // 
             // burgerButton

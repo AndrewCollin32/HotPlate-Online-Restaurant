@@ -31,6 +31,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.restaurantName = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.restaurantName);
             this.panel1.Controls.Add(this.nameLabel);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -53,6 +55,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(979, 90);
             this.panel1.TabIndex = 0;
+            // 
+            // restaurantName
+            // 
+            this.restaurantName.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restaurantName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.restaurantName.Location = new System.Drawing.Point(431, 33);
+            this.restaurantName.Name = "restaurantName";
+            this.restaurantName.Size = new System.Drawing.Size(100, 33);
+            this.restaurantName.TabIndex = 3;
+            this.restaurantName.Text = "Ernie\'s";
+            this.restaurantName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // nameLabel
             // 
@@ -126,6 +139,8 @@
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label restaurantName;
 
         private HotPlateBurger.DashBoard dashBoard1;
 
