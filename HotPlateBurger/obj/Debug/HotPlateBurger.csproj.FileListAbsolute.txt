@@ -31,3 +31,7 @@ C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBu
 C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.exe
 C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.pdb
 C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.BurgerFrame.resources
+C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.ChickenFrame.resources
+C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.DessertsFrame.resources
+C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.DrinksFrame.resources
+C:\Users\Syste\RiderProjects\HotPlateBurgerd\HotPlateBurger\obj\Debug\HotPlateBurger.SidesFrame.resources

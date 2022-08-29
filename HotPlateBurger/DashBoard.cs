@@ -42,5 +42,37 @@ namespace HotPlateBurger
             loadForm(new BurgerFrame());
             previousButton = burgerButton;
         }
+
+        private void chickenButton_Click(object sender, EventArgs e)
+        {
+            previousButton.BackColor = Color.Coral;
+            chickenButton.BackColor = Color.SandyBrown;
+            loadForm(new ChickenFrame());
+            previousButton = chickenButton;
+        }
+
+        private void sidesButton_Click(object sender, EventArgs e)
+        {
+            previousButton.BackColor = Color.Coral;
+            sidesButton.BackColor = Color.SandyBrown;
+            loadForm(new SidesFrame());
+            previousButton = sidesButton;
+        }
+
+        private void drinkButton_Click(object sender, EventArgs e)
+        {
+            previousButton.BackColor = Color.Coral;
+            drinkButton.BackColor = Color.SandyBrown;
+            loadForm(new DrinksFrame());
+            previousButton = drinkButton;
+        }
+
+        private void dessertsButton_Click(object sender, EventArgs e)
+        {
+            previousButton.BackColor = Color.Coral;
+            dessertsButton.BackColor = Color.SandyBrown;
+            loadForm(new DessertsFrame());
+            previousButton = dessertsButton;
+        }
     }
 }

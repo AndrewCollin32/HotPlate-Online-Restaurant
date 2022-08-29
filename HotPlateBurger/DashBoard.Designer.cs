@@ -111,6 +111,7 @@ namespace HotPlateBurger
             this.chickenButton.TabIndex = 2;
             this.chickenButton.Text = "Chicken";
             this.chickenButton.UseVisualStyleBackColor = true;
+            this.chickenButton.Click += new System.EventHandler(this.chickenButton_Click);
             // 
             // sidesButton
             // 
@@ -126,6 +127,7 @@ namespace HotPlateBurger
             this.sidesButton.TabIndex = 3;
             this.sidesButton.Text = "Sides";
             this.sidesButton.UseVisualStyleBackColor = true;
+            this.sidesButton.Click += new System.EventHandler(this.sidesButton_Click);
             // 
             // drinkButton
             // 
@@ -141,6 +143,7 @@ namespace HotPlateBurger
             this.drinkButton.TabIndex = 4;
             this.drinkButton.Text = "Drinks";
             this.drinkButton.UseVisualStyleBackColor = true;
+            this.drinkButton.Click += new System.EventHandler(this.drinkButton_Click);
             // 
             // dessertsButton
             // 
@@ -156,6 +159,7 @@ namespace HotPlateBurger
             this.dessertsButton.TabIndex = 5;
             this.dessertsButton.Text = "Desserts";
             this.dessertsButton.UseVisualStyleBackColor = true;
+            this.dessertsButton.Click += new System.EventHandler(this.dessertsButton_Click);
             // 
             // pictureBox1
             // 
