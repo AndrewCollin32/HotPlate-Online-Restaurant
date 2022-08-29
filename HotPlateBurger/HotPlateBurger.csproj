@@ -99,6 +99,12 @@
         <Compile Include="SidesFrame.Designer.cs">
           <DependentUpon>SidesFrame.cs</DependentUpon>
         </Compile>
+        <Compile Include="Widget.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Widget.Designer.cs">
+          <DependentUpon>Widget.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="AllFrame.resx">
           <DependentUpon>AllFrame.cs</DependentUpon>
         </EmbeddedResource>
@@ -131,6 +137,9 @@
         </Compile>
         <EmbeddedResource Include="SidesFrame.resx">
           <DependentUpon>SidesFrame.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Widget.resx">
+          <DependentUpon>Widget.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
