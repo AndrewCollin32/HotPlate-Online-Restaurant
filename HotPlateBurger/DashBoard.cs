@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace HotPlateBurger
 {
@@ -7,6 +8,11 @@ namespace HotPlateBurger
         public DashBoard()
         {
             InitializeComponent();
+        }
+
+        private void allButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

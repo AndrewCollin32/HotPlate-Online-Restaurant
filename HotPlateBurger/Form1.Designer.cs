@@ -103,6 +103,7 @@
             // dashBoard1
             // 
             this.dashBoard1.BackColor = System.Drawing.Color.Gray;
+            this.dashBoard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashBoard1.Location = new System.Drawing.Point(0, 0);
             this.dashBoard1.Name = "dashBoard1";
             this.dashBoard1.Size = new System.Drawing.Size(979, 518);

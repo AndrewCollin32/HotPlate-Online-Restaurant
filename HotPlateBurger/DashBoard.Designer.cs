@@ -40,13 +40,15 @@ namespace HotPlateBurger
             this.drinkButton = new System.Windows.Forms.Button();
             this.dessertsButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Coral;
             this.flowLayoutPanel1.Controls.Add(this.allButton);
             this.flowLayoutPanel1.Controls.Add(this.burgerButton);
@@ -55,6 +57,7 @@ namespace HotPlateBurger
             this.flowLayoutPanel1.Controls.Add(this.drinkButton);
             this.flowLayoutPanel1.Controls.Add(this.dessertsButton);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -69,12 +72,13 @@ namespace HotPlateBurger
             this.allButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.allButton.Location = new System.Drawing.Point(0, 0);
-            this.allButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.allButton.Margin = new System.Windows.Forms.Padding(0);
             this.allButton.Name = "allButton";
             this.allButton.Size = new System.Drawing.Size(234, 68);
             this.allButton.TabIndex = 0;
             this.allButton.Text = "All";
             this.allButton.UseVisualStyleBackColor = true;
+            this.allButton.Click += new System.EventHandler(this.allButton_Click);
             // 
             // burgerButton
             // 
@@ -164,18 +168,41 @@ namespace HotPlateBurger
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(234, 518);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(234, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(745, 518);
+            this.panel2.TabIndex = 2;
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "DashBoard";
             this.Size = new System.Drawing.Size(979, 518);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Panel panel2;
+
+        private System.Windows.Forms.Panel panel1;
 
         private System.Windows.Forms.PictureBox pictureBox1;
 
