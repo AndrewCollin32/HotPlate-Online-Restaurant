@@ -12,7 +12,7 @@ namespace HotPlateBurger
         {
             this.price = price;
             this.title = title;
-            InitializeComponent();
+            InitializeComponent(title, price, picture);
             this.Margin = new Padding(30, 30, 30, 30);
         }
         

@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.restaurantName);
             this.panel1.Controls.Add(this.nameLabel);
             this.panel1.Controls.Add(this.pictureBox2);

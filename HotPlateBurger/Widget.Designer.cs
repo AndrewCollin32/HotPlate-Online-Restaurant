@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
+using System.Net.Mime;
 
 namespace HotPlateBurger
 {
@@ -29,7 +31,7 @@ namespace HotPlateBurger
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(string title, string price, string picture)
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,7 +57,7 @@ namespace HotPlateBurger
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::HotPlateBurger.Properties.Resources.vanillaMilkShake;
+            this.pictureBox1.Image = Properties.Resources.ResourceManager.GetObject(picture) as Image;
             this.pictureBox1.Location = new System.Drawing.Point(15, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(265, 222);
@@ -71,7 +73,7 @@ namespace HotPlateBurger
             this.nameItem.Name = "nameItem";
             this.nameItem.Size = new System.Drawing.Size(291, 33);
             this.nameItem.TabIndex = 1;
-            this.nameItem.Text = "word";
+            this.nameItem.Text = title;
             this.nameItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // priceItem
@@ -82,7 +84,7 @@ namespace HotPlateBurger
             this.priceItem.Name = "priceItem";
             this.priceItem.Size = new System.Drawing.Size(105, 37);
             this.priceItem.TabIndex = 2;
-            this.priceItem.Text = "$3.0";
+            this.priceItem.Text = "$" + price;
             this.priceItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2

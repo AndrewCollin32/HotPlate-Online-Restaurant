@@ -73,8 +73,8 @@ namespace HotPlateBurger
             this.allButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.allButton.FlatAppearance.BorderSize = 0;
             this.allButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.allButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.allButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.allButton.Location = new System.Drawing.Point(0, 0);
             this.allButton.Margin = new System.Windows.Forms.Padding(0);
             this.allButton.Name = "allButton";
@@ -89,14 +89,14 @@ namespace HotPlateBurger
             this.burgerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.burgerButton.FlatAppearance.BorderSize = 0;
             this.burgerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.burgerButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.burgerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.burgerButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burgerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.burgerButton.Location = new System.Drawing.Point(0, 68);
             this.burgerButton.Margin = new System.Windows.Forms.Padding(0);
             this.burgerButton.Name = "burgerButton";
             this.burgerButton.Size = new System.Drawing.Size(234, 68);
             this.burgerButton.TabIndex = 1;
-            this.burgerButton.Text = "Flame Grilled Burgers";
+            this.burgerButton.Text = "Beef Burgers";
             this.burgerButton.UseVisualStyleBackColor = true;
             this.burgerButton.Click += new System.EventHandler(this.burgerButton_Click);
             // 
@@ -105,14 +105,14 @@ namespace HotPlateBurger
             this.chickenButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chickenButton.FlatAppearance.BorderSize = 0;
             this.chickenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chickenButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chickenButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.chickenButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chickenButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.chickenButton.Location = new System.Drawing.Point(0, 136);
             this.chickenButton.Margin = new System.Windows.Forms.Padding(0);
             this.chickenButton.Name = "chickenButton";
             this.chickenButton.Size = new System.Drawing.Size(234, 68);
             this.chickenButton.TabIndex = 2;
-            this.chickenButton.Text = "Hand-Breaded Chicken";
+            this.chickenButton.Text = "Chicken";
             this.chickenButton.UseVisualStyleBackColor = true;
             this.chickenButton.Click += new System.EventHandler(this.chickenButton_Click);
             // 
@@ -121,14 +121,14 @@ namespace HotPlateBurger
             this.sidesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sidesButton.FlatAppearance.BorderSize = 0;
             this.sidesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sidesButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sidesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sidesButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sidesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.sidesButton.Location = new System.Drawing.Point(0, 204);
             this.sidesButton.Margin = new System.Windows.Forms.Padding(0);
             this.sidesButton.Name = "sidesButton";
             this.sidesButton.Size = new System.Drawing.Size(234, 68);
             this.sidesButton.TabIndex = 3;
-            this.sidesButton.Text = "Fries and Sides";
+            this.sidesButton.Text = "Sides";
             this.sidesButton.UseVisualStyleBackColor = true;
             this.sidesButton.Click += new System.EventHandler(this.sidesButton_Click);
             // 
@@ -137,8 +137,8 @@ namespace HotPlateBurger
             this.drinkButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.drinkButton.FlatAppearance.BorderSize = 0;
             this.drinkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.drinkButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinkButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.drinkButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinkButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.drinkButton.Location = new System.Drawing.Point(0, 272);
             this.drinkButton.Margin = new System.Windows.Forms.Padding(0);
             this.drinkButton.Name = "drinkButton";
@@ -153,8 +153,8 @@ namespace HotPlateBurger
             this.dessertsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dessertsButton.FlatAppearance.BorderSize = 0;
             this.dessertsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dessertsButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dessertsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dessertsButton.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dessertsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dessertsButton.Location = new System.Drawing.Point(0, 340);
             this.dessertsButton.Margin = new System.Windows.Forms.Padding(0);
             this.dessertsButton.Name = "dessertsButton";
@@ -198,7 +198,7 @@ namespace HotPlateBurger
             this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.totalLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.totalLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.totalLabel.Location = new System.Drawing.Point(92, 33);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(100, 33);

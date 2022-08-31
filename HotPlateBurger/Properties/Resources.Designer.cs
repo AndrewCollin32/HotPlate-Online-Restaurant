@@ -102,9 +102,9 @@ namespace HotPlateBurger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ChickenBites {
+        internal static System.Drawing.Bitmap chickenBites {
             get {
-                object obj = ResourceManager.GetObject("ChickenBites", resourceCulture);
+                object obj = ResourceManager.GetObject("chickenBites", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
