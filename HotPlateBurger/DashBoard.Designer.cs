@@ -96,7 +96,7 @@ namespace HotPlateBurger
             this.burgerButton.Name = "burgerButton";
             this.burgerButton.Size = new System.Drawing.Size(234, 68);
             this.burgerButton.TabIndex = 1;
-            this.burgerButton.Text = "Burgers";
+            this.burgerButton.Text = "Flame Grilled Burgers";
             this.burgerButton.UseVisualStyleBackColor = true;
             this.burgerButton.Click += new System.EventHandler(this.burgerButton_Click);
             // 
@@ -112,7 +112,7 @@ namespace HotPlateBurger
             this.chickenButton.Name = "chickenButton";
             this.chickenButton.Size = new System.Drawing.Size(234, 68);
             this.chickenButton.TabIndex = 2;
-            this.chickenButton.Text = "Chicken";
+            this.chickenButton.Text = "Hand-Breaded Chicken";
             this.chickenButton.UseVisualStyleBackColor = true;
             this.chickenButton.Click += new System.EventHandler(this.chickenButton_Click);
             // 
@@ -128,7 +128,7 @@ namespace HotPlateBurger
             this.sidesButton.Name = "sidesButton";
             this.sidesButton.Size = new System.Drawing.Size(234, 68);
             this.sidesButton.TabIndex = 3;
-            this.sidesButton.Text = "Sides";
+            this.sidesButton.Text = "Fries and Sides";
             this.sidesButton.UseVisualStyleBackColor = true;
             this.sidesButton.Click += new System.EventHandler(this.sidesButton_Click);
             // 
@@ -144,7 +144,7 @@ namespace HotPlateBurger
             this.drinkButton.Name = "drinkButton";
             this.drinkButton.Size = new System.Drawing.Size(234, 68);
             this.drinkButton.TabIndex = 4;
-            this.drinkButton.Text = "Drinks";
+            this.drinkButton.Text = "Drinks and Shakes";
             this.drinkButton.UseVisualStyleBackColor = true;
             this.drinkButton.Click += new System.EventHandler(this.drinkButton_Click);
             // 
@@ -183,6 +183,7 @@ namespace HotPlateBurger
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(15, 22);
             this.pictureBox1.Name = "pictureBox1";
@@ -190,10 +191,12 @@ namespace HotPlateBurger
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // totalLabel
             // 
             this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.totalLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.totalLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.totalLabel.Location = new System.Drawing.Point(92, 33);
@@ -201,6 +204,7 @@ namespace HotPlateBurger
             this.totalLabel.Size = new System.Drawing.Size(100, 33);
             this.totalLabel.TabIndex = 1;
             this.totalLabel.Text = "Total: $0";
+            this.totalLabel.Click += new System.EventHandler(this.totalLabel_Click);
             // 
             // panel1
             // 

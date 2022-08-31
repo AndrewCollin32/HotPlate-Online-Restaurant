@@ -31,7 +31,6 @@ namespace HotPlateBurger
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Widget));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameItem = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@ namespace HotPlateBurger
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(39, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 224);
@@ -72,7 +70,7 @@ namespace HotPlateBurger
             this.nameItem.Name = "nameItem";
             this.nameItem.Size = new System.Drawing.Size(291, 33);
             this.nameItem.TabIndex = 1;
-            this.nameItem.Text = "Classic Cheese Burger";
+            this.nameItem.Text = "word";
             this.nameItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // priceItem
@@ -83,7 +81,7 @@ namespace HotPlateBurger
             this.priceItem.Name = "priceItem";
             this.priceItem.Size = new System.Drawing.Size(105, 37);
             this.priceItem.TabIndex = 2;
-            this.priceItem.Text = "$4.30";
+            this.priceItem.Text = "$3.0";
             this.priceItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2

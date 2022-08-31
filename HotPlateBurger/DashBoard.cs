@@ -74,5 +74,15 @@ namespace HotPlateBurger
             loadForm(new DessertsFrame());
             previousButton = dessertsButton;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void totalLabel_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

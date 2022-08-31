@@ -5,9 +5,15 @@ namespace HotPlateBurger
 {
     public partial class Widget : UserControl
     {
-        public Widget()
+
+        public string title;
+        public string price;
+        public Widget(string title, string price, string picture)
         {
+            this.price = price;
+            this.title = title;
             InitializeComponent();
+            this.Margin = new Padding(30, 30, 30, 30);
         }
         
     }
