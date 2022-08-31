@@ -53,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(997, 90);
+            this.panel1.Size = new System.Drawing.Size(1337, 90);
             this.panel1.TabIndex = 0;
             // 
             // restaurantName
@@ -63,7 +63,7 @@
             this.restaurantName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.restaurantName.Location = new System.Drawing.Point(431, 33);
             this.restaurantName.Name = "restaurantName";
-            this.restaurantName.Size = new System.Drawing.Size(118, 33);
+            this.restaurantName.Size = new System.Drawing.Size(458, 33);
             this.restaurantName.TabIndex = 3;
             this.restaurantName.Text = "Ernie\'s";
             this.restaurantName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -74,7 +74,7 @@
             this.nameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nameLabel.Location = new System.Drawing.Point(690, 28);
+            this.nameLabel.Location = new System.Drawing.Point(1030, 28);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(213, 47);
             this.nameLabel.TabIndex = 2;
@@ -87,7 +87,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(909, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1249, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(63, 63);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 90);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(997, 516);
+            this.panel2.Size = new System.Drawing.Size(1337, 738);
             this.panel2.TabIndex = 1;
             // 
             // panelSwitch
@@ -121,7 +121,7 @@
             this.panelSwitch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSwitch.Location = new System.Drawing.Point(0, 0);
             this.panelSwitch.Name = "panelSwitch";
-            this.panelSwitch.Size = new System.Drawing.Size(997, 516);
+            this.panelSwitch.Size = new System.Drawing.Size(1337, 738);
             this.panelSwitch.TabIndex = 1;
             // 
             // Form1
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(997, 606);
+            this.ClientSize = new System.Drawing.Size(1337, 828);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(600, 645);
