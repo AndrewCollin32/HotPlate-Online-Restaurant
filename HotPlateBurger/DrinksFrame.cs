@@ -12,7 +12,7 @@ namespace HotPlateBurger
             MySqlDataReader reader = Form1.executeSQL("SELECT * FROM foodtable WHERE category = 'd'");
             while (reader.Read())
             {
-                flowLayoutPanel1.Controls.Add(new Widget("" + reader[2],"" + reader[3],  "" + reader[4]));
+                flowLayoutPanel1.Controls.Add(new Widget("" + reader[2],"" + reader[3],  "" + reader[4], ""+reader[1]));
             }
         }
     }

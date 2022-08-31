@@ -15,6 +15,8 @@ namespace HotPlateBurger
     public partial class Form1 : Form
     {
 
+        public static Dictionary<string, Object[]> basket;
+
         public static double total = 0;
         public static Panel switchPanel;
         
@@ -29,6 +31,7 @@ namespace HotPlateBurger
         public Form1()
         {
             InitializeComponent();
+            basket = new Dictionary<string, object[]>();
             switchPanel = panelSwitch;
             
             db = new DashBoard();
@@ -39,6 +42,11 @@ namespace HotPlateBurger
             db.Dock = DockStyle.Fill;
             db.BringToFront();
 
+        }
+
+        public static void updateBasket()
+        {
+            
         }
 
         public static MySqlDataReader executeSQL(String command)
