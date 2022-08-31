@@ -206,9 +206,40 @@
       <Content Include="Pictures\HotPlateLogo.png" />
       <Content Include="Pictures\HotPlateLogo2.png" />
       <Content Include="Pictures\logoWhite.png" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Resources" />
+      <Content Include="Resources\bbqCheeseBurger.jpg" />
+      <Content Include="Resources\bbqChickenBurger.jpg" />
+      <Content Include="Resources\bbqChickenBurger1.jpg" />
+      <Content Include="Resources\breakfastBurger.jpg" />
+      <Content Include="Resources\cheeseBurger.jpg" />
+      <Content Include="Resources\ChickenBites.jpg" />
+      <Content Include="Resources\chickenBurger.jpg" />
+      <Content Include="Resources\chickenTenders.jpg" />
+      <Content Include="Resources\chocolateMilkShake.jpg" />
+      <Content Include="Resources\coffee.jpg" />
+      <Content Include="Resources\coke.jpg" />
+      <Content Include="Resources\coleslaw.jpg" />
+      <Content Include="Resources\dietCoke.jpg" />
+      <Content Include="Resources\dipper.jpg" />
+      <Content Include="Resources\doubleCheeseBurger.jpg" />
+      <Content Include="Resources\drPepper.jpg" />
+      <Content Include="Resources\frenchFries.jpg" />
+      <Content Include="Resources\friedPickles.jpg" />
+      <Content Include="Resources\grilledChickenBurger.jpg" />
+      <Content Include="Resources\hamburger.jpg" />
+      <Content Include="Resources\hersheyCake.jpg" />
+      <Content Include="Resources\hotplateCheeseBurger.jpg" />
+      <Content Include="Resources\mintCake.jpg" />
+      <Content Include="Resources\mintMilkShake.jpg" />
+      <Content Include="Resources\oreoCake.jpg" />
+      <Content Include="Resources\popcornChicken.jpg" />
+      <Content Include="Resources\rootBeer.jpg" />
+      <Content Include="Resources\santaFeChickenBurger.jpg" />
+      <Content Include="Resources\softServeIceCream.jpg" />
+      <Content Include="Resources\sprite.jpg" />
+      <Content Include="Resources\strawberryMilkShake.jpg" />
+      <Content Include="Resources\sweetPotatoFries.jpg" />
+      <Content Include="Resources\taterTots.jpg" />
+      <Content Include="Resources\vanillaMilkShake.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

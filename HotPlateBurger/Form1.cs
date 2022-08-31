@@ -15,9 +15,9 @@ namespace HotPlateBurger
     public partial class Form1 : Form
     {
         public static string databaseName = "hotplaterestaurant";
-        public static string username = "";
+        public static string username = "root";
         public static string password = "";
-        public static string server = "";
+        public static string server = "localhost";
         
         public Form1()
         {
