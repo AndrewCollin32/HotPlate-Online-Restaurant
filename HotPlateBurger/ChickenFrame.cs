@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HotPlateBurger
 {
@@ -8,6 +9,11 @@ namespace HotPlateBurger
         public ChickenFrame()
         {
             InitializeComponent();
+            MySqlDataReader reader = Form1.executeSQL("SELECT * FROM foodtable WHERE category = 'c'");
+            while (reader.Read())
+            {
+                flowLayoutPanel1.Controls.Add(new Widget("" + reader[2],"" + reader[3],  "" + reader[4]));
+            }
         }
     }
 }
