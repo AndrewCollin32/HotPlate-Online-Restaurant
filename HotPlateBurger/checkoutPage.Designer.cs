@@ -33,6 +33,9 @@ namespace HotPlateBurger
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(checkoutPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -52,7 +55,7 @@ namespace HotPlateBurger
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nameBox = new System.Windows.Forms.TextBox();
+            this.cardBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +64,7 @@ namespace HotPlateBurger
             this.panel4 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,6 +74,9 @@ namespace HotPlateBurger
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
@@ -89,13 +96,45 @@ namespace HotPlateBurger
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.nameBox);
+            this.panel1.Controls.Add(this.cardBox);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(453, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 738);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(514, 498);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(274, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox5.Location = new System.Drawing.Point(658, 587);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(161, 33);
+            this.textBox5.TabIndex = 15;
+            this.textBox5.Text = "MM/YY";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox4.Location = new System.Drawing.Point(473, 587);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(164, 33);
+            this.textBox4.TabIndex = 14;
+            this.textBox4.Text = "CW";
             // 
             // label15
             // 
@@ -303,14 +342,18 @@ namespace HotPlateBurger
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // nameBox
+            // cardBox
             // 
-            this.nameBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameBox.Location = new System.Drawing.Point(501, 597);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(285, 33);
-            this.nameBox.TabIndex = 1;
+            this.cardBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cardBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardBox.ForeColor = System.Drawing.Color.DimGray;
+            this.cardBox.Location = new System.Drawing.Point(473, 548);
+            this.cardBox.Name = "cardBox";
+            this.cardBox.Size = new System.Drawing.Size(346, 33);
+            this.cardBox.TabIndex = 1;
+            this.cardBox.Text = "Card Number";
+            this.cardBox.Enter += new System.EventHandler(this.nameBox_Enter);
+            this.cardBox.Leave += new System.EventHandler(this.cardBox_Leave_1);
             // 
             // button1
             // 
@@ -323,7 +366,7 @@ namespace HotPlateBurger
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 45);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Continue";
+            this.button1.Text = "Place Order";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -405,12 +448,18 @@ namespace HotPlateBurger
             this.Size = new System.Drawing.Size(1337, 738);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox pictureBox2;
+
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
 
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -447,7 +496,7 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.PictureBox pictureBox1;
 
-        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.TextBox cardBox;
 
         private System.Windows.Forms.Button exitButton;
 
