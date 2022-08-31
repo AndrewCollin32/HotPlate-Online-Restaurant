@@ -36,7 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dashBoard1 = new HotPlateBurger.DashBoard();
+            this.panelSwitch = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,21 +109,20 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dashBoard1);
+            this.panel2.Controls.Add(this.panelSwitch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 90);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(997, 516);
             this.panel2.TabIndex = 1;
             // 
-            // dashBoard1
+            // panelSwitch
             // 
-            this.dashBoard1.BackColor = System.Drawing.Color.Gray;
-            this.dashBoard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashBoard1.Location = new System.Drawing.Point(0, 0);
-            this.dashBoard1.Name = "dashBoard1";
-            this.dashBoard1.Size = new System.Drawing.Size(997, 516);
-            this.dashBoard1.TabIndex = 0;
+            this.panelSwitch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSwitch.Location = new System.Drawing.Point(0, 0);
+            this.panelSwitch.Name = "panelSwitch";
+            this.panelSwitch.Size = new System.Drawing.Size(997, 516);
+            this.panelSwitch.TabIndex = 1;
             // 
             // Form1
             // 
@@ -143,9 +142,9 @@
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Label restaurantName;
+        private System.Windows.Forms.Panel panelSwitch;
 
-        private HotPlateBurger.DashBoard dashBoard1;
+        private System.Windows.Forms.Label restaurantName;
 
         private System.Windows.Forms.Label nameLabel;
 

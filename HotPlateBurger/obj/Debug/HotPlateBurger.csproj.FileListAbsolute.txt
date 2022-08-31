@@ -113,3 +113,4 @@ C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantgfesdsdg\HotPlateBurger\b
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantgfesdsdg\HotPlateBurger\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantgfesdsdg\HotPlateBurger\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantgfesdsdg\HotPlateBurger\obj\Debug\HotPlateBurger.AddItemFrame.resources
+C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantgfesdsdg\HotPlateBurger\obj\Debug\HotPlateBurger.checkoutPage.resources

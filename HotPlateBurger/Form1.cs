@@ -16,6 +16,7 @@ namespace HotPlateBurger
     {
 
         public static double total = 0;
+        public static Panel switchPanel;
         
         public static string databaseName = "hotplaterestaurant";
         public static string username = "root";
@@ -25,6 +26,11 @@ namespace HotPlateBurger
         public Form1()
         {
             InitializeComponent();
+            switchPanel = panelSwitch;
+            panelSwitch.Controls.Clear();
+            DashBoard db = new DashBoard();
+            panelSwitch.Controls.Add(db);
+            db.Dock = DockStyle.Fill;
 
         }
 
@@ -48,7 +54,10 @@ namespace HotPlateBurger
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            DashBoard db = new DashBoard();
+            panelSwitch.Controls.Clear();
+            panelSwitch.Controls.Add(db);
+            db.Dock = DockStyle.Fill;
         }
     }
 }

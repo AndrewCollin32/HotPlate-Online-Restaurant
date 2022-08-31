@@ -111,6 +111,12 @@
         <Compile Include="BurgerFrame.Designer.cs">
           <DependentUpon>BurgerFrame.cs</DependentUpon>
         </Compile>
+        <Compile Include="checkoutPage.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="checkoutPage.Designer.cs">
+          <DependentUpon>checkoutPage.cs</DependentUpon>
+        </Compile>
         <Compile Include="ChickenFrame.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -164,6 +170,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="BurgerFrame.resx">
           <DependentUpon>BurgerFrame.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="checkoutPage.resx">
+          <DependentUpon>checkoutPage.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="ChickenFrame.resx">
           <DependentUpon>ChickenFrame.cs</DependentUpon>
