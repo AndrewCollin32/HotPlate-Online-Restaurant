@@ -80,18 +80,12 @@ namespace HotPlateBurger
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            checkoutPage cp = new checkoutPage();
-            Form1.switchPanel.Controls.Clear();
-            Form1.switchPanel.Controls.Add(cp);
-            cp.Dock = DockStyle.Fill;
+            Form1.cp.BringToFront();
         }
 
         private void totalLabel_Click(object sender, EventArgs e)
         {
-            checkoutPage cp = new checkoutPage();
-            Form1.switchPanel.Controls.Clear();
-            Form1.switchPanel.Controls.Add(cp);
-            cp.Dock = DockStyle.Fill;
+            Form1.cp.BringToFront();
         }
     }
 }

@@ -22,15 +22,22 @@ namespace HotPlateBurger
         public static string username = "root";
         public static string password = "";
         public static string server = "localhost";
+
+        public static DashBoard db;
+        public static checkoutPage cp;
         
         public Form1()
         {
             InitializeComponent();
             switchPanel = panelSwitch;
-            panelSwitch.Controls.Clear();
-            DashBoard db = new DashBoard();
+            
+            db = new DashBoard();
+            cp = new checkoutPage();
+            panelSwitch.Controls.Add(cp);
             panelSwitch.Controls.Add(db);
+            cp.Dock = DockStyle.Fill;
             db.Dock = DockStyle.Fill;
+            db.BringToFront();
 
         }
 
@@ -54,10 +61,7 @@ namespace HotPlateBurger
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            DashBoard db = new DashBoard();
-            panelSwitch.Controls.Clear();
-            panelSwitch.Controls.Add(db);
-            db.Dock = DockStyle.Fill;
+            db.BringToFront();
         }
     }
 }
