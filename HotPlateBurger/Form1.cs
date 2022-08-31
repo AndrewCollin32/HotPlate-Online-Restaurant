@@ -14,6 +14,9 @@ namespace HotPlateBurger
 {
     public partial class Form1 : Form
     {
+
+        public static double total = 0;
+        
         public static string databaseName = "hotplaterestaurant";
         public static string username = "root";
         public static string password = "";

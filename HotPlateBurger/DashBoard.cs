@@ -7,12 +7,15 @@ namespace HotPlateBurger
     public partial class DashBoard : UserControl
     {
 
+        public static Label labelWithTotal;
+
         public static Button previousButton;
         public DashBoard()
         {
             InitializeComponent();
             previousButton = allButton;
             loadForm(new AllFrame());
+            labelWithTotal = totalLabel;
         }
 
         public void loadForm(Object form)

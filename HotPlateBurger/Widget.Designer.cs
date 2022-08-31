@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
 using System.Net.Mime;
+using HotPlateBurger.Properties;
 
 namespace HotPlateBurger
 {
@@ -57,7 +58,7 @@ namespace HotPlateBurger
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = Properties.Resources.ResourceManager.GetObject(picture) as Image;
+            this.pictureBox1.Image = Resources.ResourceManager.GetObject(picture) as Image;
             this.pictureBox1.Location = new System.Drawing.Point(15, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(265, 222);
@@ -113,6 +114,7 @@ namespace HotPlateBurger
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // Widget
             // 
