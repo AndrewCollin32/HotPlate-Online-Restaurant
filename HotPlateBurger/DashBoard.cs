@@ -80,11 +80,13 @@ namespace HotPlateBurger
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Form1.updateBasket();
             Form1.cp.BringToFront();
         }
 
         private void totalLabel_Click(object sender, EventArgs e)
         {
+            Form1.updateBasket();
             Form1.cp.BringToFront();
         }
     }

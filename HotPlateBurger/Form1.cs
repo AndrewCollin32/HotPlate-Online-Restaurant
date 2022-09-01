@@ -19,6 +19,8 @@ namespace HotPlateBurger
 
         public static double total = 0;
         public static Panel switchPanel;
+        public static int taxAmount;
+        public static int tipPercentage;
         
         public static string databaseName = "hotplaterestaurant";
         public static string username = "root";
@@ -46,7 +48,16 @@ namespace HotPlateBurger
 
         public static void updateBasket()
         {
-            
+            double total = 0;
+            string[] key = basket.Keys.ToArray();
+            for (int i = 0; i < key.Length; i++)
+            {
+                total = (int) basket[key[i]][0] * (double) basket[key[i]][1] + total;
+            }
+
+            DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
+            checkoutPage.totalLabelSingle.Text = "Total: $" + total.ToString("0.00");
+
         }
 
         public static MySqlDataReader executeSQL(String command)

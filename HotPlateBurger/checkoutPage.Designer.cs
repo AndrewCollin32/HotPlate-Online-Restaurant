@@ -44,8 +44,8 @@ namespace HotPlateBurger
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.yourTotalLabel = new System.Windows.Forms.Label();
+            this.yourOrderLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace HotPlateBurger
             this.cardBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.totalLeft = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -86,8 +86,8 @@ namespace HotPlateBurger
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.yourTotalLabel);
+            this.panel1.Controls.Add(this.yourOrderLabel);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -110,10 +110,12 @@ namespace HotPlateBurger
             // 
             this.tipBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipBox.FormattingEnabled = true;
+            this.tipBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tipBox.Location = new System.Drawing.Point(108, 619);
             this.tipBox.Name = "tipBox";
             this.tipBox.Size = new System.Drawing.Size(121, 24);
             this.tipBox.TabIndex = 18;
+            this.tipBox.SelectedIndexChanged += new System.EventHandler(this.tipBox_SelectedIndexChanged);
             // 
             // textBox4
             // 
@@ -228,27 +230,27 @@ namespace HotPlateBurger
             this.label11.Text = "Tips";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label14
+            // yourTotalLabel
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label14.Font = new System.Drawing.Font("Yu Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(15, 415);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(364, 153);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Total: $59.30";
+            this.yourTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.yourTotalLabel.Font = new System.Drawing.Font("Yu Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourTotalLabel.ForeColor = System.Drawing.Color.White;
+            this.yourTotalLabel.Location = new System.Drawing.Point(15, 415);
+            this.yourTotalLabel.Name = "yourTotalLabel";
+            this.yourTotalLabel.Size = new System.Drawing.Size(364, 153);
+            this.yourTotalLabel.TabIndex = 10;
+            this.yourTotalLabel.Text = "Total: $59.30";
             // 
-            // label10
+            // yourOrderLabel
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.Font = new System.Drawing.Font("Yu Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(14, 54);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(364, 324);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "3 x Cheeseburger $30.29";
+            this.yourOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.yourOrderLabel.Font = new System.Drawing.Font("Yu Gothic Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourOrderLabel.ForeColor = System.Drawing.Color.White;
+            this.yourOrderLabel.Location = new System.Drawing.Point(14, 54);
+            this.yourOrderLabel.Name = "yourOrderLabel";
+            this.yourOrderLabel.Size = new System.Drawing.Size(364, 324);
+            this.yourOrderLabel.TabIndex = 10;
+            this.yourOrderLabel.Text = "3 x Cheeseburger $30.29";
             // 
             // label9
             // 
@@ -392,24 +394,24 @@ namespace HotPlateBurger
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.totalLeft);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 657);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(453, 81);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // totalLeft
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(17, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 51);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total: $40";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.totalLeft.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.totalLeft.Font = new System.Drawing.Font("Yu Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLeft.ForeColor = System.Drawing.Color.Transparent;
+            this.totalLeft.Location = new System.Drawing.Point(17, 17);
+            this.totalLeft.Name = "totalLeft";
+            this.totalLeft.Size = new System.Drawing.Size(286, 51);
+            this.totalLeft.TabIndex = 0;
+            this.totalLeft.Text = "Total: $40";
+            this.totalLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
@@ -525,13 +527,16 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.Button button1;
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label totalLeft;
 
         private System.Windows.Forms.Panel panel3;
 
         private System.Windows.Forms.Panel panel2;
 
         private System.Windows.Forms.Panel panel1;
+        
+        public System.Windows.Forms.Label yourTotalLabel;
+        public System.Windows.Forms.Label yourOrderLabel;
 
         #endregion
     }

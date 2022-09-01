@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,6 +7,9 @@ namespace HotPlateBurger
 {
     public partial class checkoutPage : UserControl
     {
+        public static Label totalLabelSingle;
+        public static Label orderTotalLabel;
+        public static Label totalLabel;
         public checkoutPage()
         {
             InitializeComponent();
@@ -19,6 +23,10 @@ namespace HotPlateBurger
             tipBox.Items.Add("30%");
 
             tipBox.SelectedIndex = 3;
+
+            totalLabelSingle = totalLeft;
+            orderTotalLabel = yourOrderLabel;
+            totalLabel = yourTotalLabel;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -106,6 +114,12 @@ namespace HotPlateBurger
                 textBox4.Text = "Full Name";
                 textBox4.ForeColor = Color.DimGray;
             }
+        }
+
+        private void tipBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Form1.tipPercentage = int.Parse(((string)tipBox.SelectedItem).Replace("%", ""));
+            Debug.WriteLine(Form1.tipPercentage);
         }
     }
 }
