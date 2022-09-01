@@ -19,8 +19,9 @@ namespace HotPlateBurger
 
         public static double total = 0;
         public static Panel switchPanel;
-        public static int taxAmount;
+        public static int taxAmount = 10;
         public static int tipPercentage;
+        public static double deliveryFee = 5.00;
         
         public static string databaseName = "hotplaterestaurant";
         public static string username = "root";
@@ -48,15 +49,25 @@ namespace HotPlateBurger
 
         public static void updateBasket()
         {
+
+            String orderTotal = "";
             double total = 0;
             string[] key = basket.Keys.ToArray();
             for (int i = 0; i < key.Length; i++)
             {
                 total = (int) basket[key[i]][0] * (double) basket[key[i]][1] + total;
+                orderTotal = orderTotal + "\n" + basket[key[i]][0] + "x " + basket[key[i]][2] + " - $" + ((int) basket[key[i]][0] * (double) basket[key[i]][1]).ToString("0.00");
             }
 
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
             checkoutPage.totalLabelSingle.Text = "Total: $" + total.ToString("0.00");
+            checkoutPage.orderTotalLabel.Text = orderTotal;
+
+            double grandTotal = (total * tipPercentage / 100) + (total * taxAmount / 100) + total;
+            string totalCalculation = "Order Total: $" + total + "\nTip: " + tipPercentage + "%\nTaxes: " + taxAmount +
+                                      "%\nDelivery Fee: $" + deliveryFee + "\nGrand Total: $" + grandTotal;
+
+            checkoutPage.totalLabel.Text = totalCalculation;
 
         }
 
