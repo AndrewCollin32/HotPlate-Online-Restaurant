@@ -10,13 +10,14 @@ namespace HotPlateBurger
     {
 
         public string itemID;
-        public CheckoutWidget(int amount, string title, string picture, string id)
+        public Button button;
+        public CheckoutWidget(int amount, string title, string picture, string id, Button button)
         {
             InitializeComponent();
             widgetSize.Text = "" + amount;
             widgetTitle.Text = title;
             picturebox.Image = Resources.ResourceManager.GetObject(picture) as Image;
-            
+            this.button = button;
             itemID = id;
         }
 
@@ -24,6 +25,9 @@ namespace HotPlateBurger
         {
             Form1.basket.Remove(itemID);
             Form1.updateBasket();
+            button.Text = "Add";
+            button.BackColor = Color.Coral;
+            
         }
     }
 }

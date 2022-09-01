@@ -58,7 +58,7 @@ namespace HotPlateBurger
             {
                 total = (int) basket[key[i]][0] * (double) basket[key[i]][1] + total;
                 orderTotal = orderTotal + "\n" + basket[key[i]][0] + "x " + basket[key[i]][2] + " - $" + ((int) basket[key[i]][0] * (double) basket[key[i]][1]).ToString("0.00");
-                checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key[i]][0], (string) basket[key[i]][2], (string) basket[key[i]][3], (string) basket[key[i]][4]));
+                checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key[i]][0], (string) basket[key[i]][2], (string) basket[key[i]][3], (string) basket[key[i]][4], (Button)basket[key[i]][5]));
             }
 
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
