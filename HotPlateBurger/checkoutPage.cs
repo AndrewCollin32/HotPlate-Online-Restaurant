@@ -13,6 +13,11 @@ namespace HotPlateBurger
         public checkoutPage()
         {
             InitializeComponent();
+
+            totalLabelSingle = totalLeft;
+            orderTotalLabel = yourOrderLabel;
+            totalLabel = yourTotalLabel;
+            
             pictureBox2.ImageLocation = "https://www.merchantequip.com/image/?logos=v|m|a|d&height=32";
             tipBox.Items.Add("0%");
             tipBox.Items.Add("5%");
@@ -21,12 +26,14 @@ namespace HotPlateBurger
             tipBox.Items.Add("20%");
             tipBox.Items.Add("25%");
             tipBox.Items.Add("30%");
+            tipBox.Items.Add("35%");
+            tipBox.Items.Add("40%");
+            tipBox.Items.Add("45%");
+            tipBox.Items.Add("50%");
 
             tipBox.SelectedIndex = 3;
-
-            totalLabelSingle = totalLeft;
-            orderTotalLabel = yourOrderLabel;
-            totalLabel = yourTotalLabel;
+            
+            totalLabelString.Text = "Order Total: \nTip: \nTaxes: \nDelivery Fee: \nGrand Total: ";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -120,6 +127,8 @@ namespace HotPlateBurger
         {
             Form1.tipPercentage = int.Parse(((string)tipBox.SelectedItem).Replace("%", ""));
             Debug.WriteLine(Form1.tipPercentage);
+            Form1.updateBasket();
         }
+        
     }
 }
