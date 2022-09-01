@@ -33,14 +33,15 @@ namespace HotPlateBurger
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(checkoutPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.expDateLabel = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cardNumberMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.totalLabelString = new System.Windows.Forms.Label();
             this.tipBox = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.expDateTextBox = new System.Windows.Forms.TextBox();
             this.cwTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@ namespace HotPlateBurger
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cardBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.totalLeft = new System.Windows.Forms.Label();
@@ -76,14 +76,15 @@ namespace HotPlateBurger
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.expDateLabel);
+            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.cardNumberMaskedTextBox);
             this.panel1.Controls.Add(this.totalLabelString);
             this.panel1.Controls.Add(this.tipBox);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.expDateTextBox);
             this.panel1.Controls.Add(this.cwTextBox);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -100,13 +101,45 @@ namespace HotPlateBurger
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.cardBox);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(453, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 738);
             this.panel1.TabIndex = 0;
+            // 
+            // expDateLabel
+            // 
+            this.expDateLabel.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expDateLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.expDateLabel.Location = new System.Drawing.Point(654, 624);
+            this.expDateLabel.Name = "expDateLabel";
+            this.expDateLabel.Size = new System.Drawing.Size(165, 33);
+            this.expDateLabel.TabIndex = 22;
+            this.expDateLabel.Text = "MM/YY";
+            this.expDateLabel.Enter += new System.EventHandler(this.expDateLabel_Enter);
+            this.expDateLabel.Leave += new System.EventHandler(this.expDateLabel_Leave);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(108, 682);
+            this.maskedTextBox1.Mask = "000-000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(270, 33);
+            this.maskedTextBox1.TabIndex = 21;
+            // 
+            // cardNumberMaskedTextBox
+            // 
+            this.cardNumberMaskedTextBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardNumberMaskedTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.cardNumberMaskedTextBox.Location = new System.Drawing.Point(473, 586);
+            this.cardNumberMaskedTextBox.Name = "cardNumberMaskedTextBox";
+            this.cardNumberMaskedTextBox.Size = new System.Drawing.Size(346, 33);
+            this.cardNumberMaskedTextBox.TabIndex = 20;
+            this.cardNumberMaskedTextBox.Text = "Card Number";
+            this.cardNumberMaskedTextBox.Enter += new System.EventHandler(this.cardNumberMaskedTextBox_Enter);
+            this.cardNumberMaskedTextBox.Leave += new System.EventHandler(this.cardNumberMaskedTextBox_Leave);
             // 
             // totalLabelString
             // 
@@ -122,12 +155,12 @@ namespace HotPlateBurger
             // tipBox
             // 
             this.tipBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tipBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipBox.FormattingEnabled = true;
             this.tipBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tipBox.Location = new System.Drawing.Point(108, 619);
+            this.tipBox.Location = new System.Drawing.Point(109, 597);
             this.tipBox.Name = "tipBox";
-            this.tipBox.Size = new System.Drawing.Size(121, 24);
+            this.tipBox.Size = new System.Drawing.Size(121, 28);
             this.tipBox.TabIndex = 18;
             this.tipBox.SelectedIndexChanged += new System.EventHandler(this.tipBox_SelectedIndexChanged);
             // 
@@ -155,25 +188,13 @@ namespace HotPlateBurger
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
-            // expDateTextBox
-            // 
-            this.expDateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.expDateTextBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expDateTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.expDateTextBox.Location = new System.Drawing.Point(658, 625);
-            this.expDateTextBox.Name = "expDateTextBox";
-            this.expDateTextBox.Size = new System.Drawing.Size(161, 33);
-            this.expDateTextBox.TabIndex = 15;
-            this.expDateTextBox.Text = "MM/YY";
-            this.expDateTextBox.Enter += new System.EventHandler(this.expDateTextBox_Enter);
-            this.expDateTextBox.Leave += new System.EventHandler(this.expDateTextBox_Leave);
-            // 
             // cwTextBox
             // 
             this.cwTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cwTextBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cwTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.cwTextBox.Location = new System.Drawing.Point(473, 625);
+            this.cwTextBox.MaxLength = 3;
             this.cwTextBox.Name = "cwTextBox";
             this.cwTextBox.Size = new System.Drawing.Size(164, 33);
             this.cwTextBox.TabIndex = 14;
@@ -191,22 +212,13 @@ namespace HotPlateBurger
             this.label15.TabIndex = 13;
             this.label15.Text = "Your Order:";
             // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox3.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(108, 682);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 28);
-            this.textBox3.TabIndex = 12;
-            // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(108, 648);
+            this.textBox2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(109, 636);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 28);
+            this.textBox2.Size = new System.Drawing.Size(270, 33);
             this.textBox2.TabIndex = 12;
             // 
             // label13
@@ -226,7 +238,7 @@ namespace HotPlateBurger
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(14, 653);
+            this.label12.Location = new System.Drawing.Point(15, 641);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 23);
             this.label12.TabIndex = 11;
@@ -238,7 +250,7 @@ namespace HotPlateBurger
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(14, 619);
+            this.label11.Location = new System.Drawing.Point(15, 596);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 23);
             this.label11.TabIndex = 11;
@@ -379,19 +391,6 @@ namespace HotPlateBurger
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // cardBox
-            // 
-            this.cardBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cardBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cardBox.ForeColor = System.Drawing.Color.DimGray;
-            this.cardBox.Location = new System.Drawing.Point(473, 586);
-            this.cardBox.Name = "cardBox";
-            this.cardBox.Size = new System.Drawing.Size(346, 33);
-            this.cardBox.TabIndex = 1;
-            this.cardBox.Text = "Card Number";
-            this.cardBox.Enter += new System.EventHandler(this.nameBox_Enter);
-            this.cardBox.Leave += new System.EventHandler(this.cardBox_Leave_1);
-            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -493,6 +492,12 @@ namespace HotPlateBurger
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.MaskedTextBox expDateLabel;
+
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+
+        private System.Windows.Forms.MaskedTextBox cardNumberMaskedTextBox;
+
         public System.Windows.Forms.Label totalLabelString;
 
         private System.Windows.Forms.ComboBox tipBox;
@@ -502,7 +507,6 @@ namespace HotPlateBurger
         private System.Windows.Forms.PictureBox pictureBox2;
 
         private System.Windows.Forms.TextBox cwTextBox;
-        private System.Windows.Forms.TextBox expDateTextBox;
 
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -510,7 +514,6 @@ namespace HotPlateBurger
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
 
         private System.Windows.Forms.Label label11;
 
@@ -536,8 +539,6 @@ namespace HotPlateBurger
         private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.PictureBox pictureBox1;
-
-        private System.Windows.Forms.TextBox cardBox;
 
         private System.Windows.Forms.Button exitButton;
 

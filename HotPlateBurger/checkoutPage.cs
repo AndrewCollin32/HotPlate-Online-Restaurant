@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace HotPlateBurger
@@ -34,6 +35,7 @@ namespace HotPlateBurger
             tipBox.SelectedIndex = 3;
             
             totalLabelString.Text = "Order Total: \nTip: \nTaxes: \nDelivery Fee: \nGrand Total: ";
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,24 +52,7 @@ namespace HotPlateBurger
         {
             Form1.db.BringToFront();
         }
-
-        private void nameBox_Enter(object sender, EventArgs e)
-        {
-            if (cardBox.Text == "Card Number")
-            {
-                cardBox.Text = "";
-                cardBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void cardBox_Leave_1(object sender, EventArgs e)
-        {
-            if (cardBox.Text == "")
-            {
-                cardBox.Text = "Card Number";
-                cardBox.ForeColor = Color.DimGray;
-            }
-        }
+        
 
         private void cwTextBox_Enter(object sender, EventArgs e)
         {
@@ -86,24 +71,8 @@ namespace HotPlateBurger
                 cwTextBox.ForeColor = Color.DimGray;
             }
         }
-
-        private void expDateTextBox_Enter(object sender, EventArgs e)
-        {
-            if (expDateTextBox.Text == "MM/YY")
-            {
-                expDateTextBox.Text = "";
-                expDateTextBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void expDateTextBox_Leave(object sender, EventArgs e)
-        {
-            if (expDateTextBox.Text == "")
-            {
-                expDateTextBox.Text = "MM/YY";
-                expDateTextBox.ForeColor = Color.DimGray;
-            }
-        }
+        
+        
 
         private void fullNameTextBox_Enter(object sender, EventArgs e)
         {
@@ -129,6 +98,45 @@ namespace HotPlateBurger
             Debug.WriteLine(Form1.tipPercentage);
             Form1.updateBasket();
         }
+
+        private void cardNumberMaskedTextBox_Enter(object sender, EventArgs e)
+        {
+            if (cardNumberMaskedTextBox.Text == "Card Number")
+            {
+                cardNumberMaskedTextBox.Mask = "0000-0000-0000-0000";
+                cardNumberMaskedTextBox.Text = "";
+                cardNumberMaskedTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void cardNumberMaskedTextBox_Leave(object sender, EventArgs e)
+        {
+            if (cardNumberMaskedTextBox.Text == "    -    -    -")
+            {
+                cardNumberMaskedTextBox.Mask = null;
+                cardNumberMaskedTextBox.Text = "Card Number";
+                cardNumberMaskedTextBox.ForeColor = Color.DimGray;
+            }
+        }
         
+        private void expDateLabel_Enter(object sender, EventArgs e)
+        {
+            if (expDateLabel.Text == "MM/YY")
+            {
+                expDateLabel.ForeColor = Color.Black;
+                expDateLabel.Text = "";
+                expDateLabel.Mask = "00/00";
+            }
+        }
+
+        private void expDateLabel_Leave(object sender, EventArgs e)
+        {
+            if (expDateLabel.Text == "  /  ")
+            {
+                expDateLabel.ForeColor = Color.DimGray;
+                expDateLabel.Text = "MM/YY";
+                expDateLabel.Mask = "";
+            }
+        }
     }
 }

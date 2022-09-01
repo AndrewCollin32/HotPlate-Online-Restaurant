@@ -62,7 +62,7 @@ namespace HotPlateBurger
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
             checkoutPage.orderTotalLabel.Text = orderTotal;
 
-            double grandTotal = (total * tipPercentage / 100) + (total * taxAmount / 100) + total;
+            double grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
             string totalCalculation = "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + taxAmount +
                                       "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
             checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
