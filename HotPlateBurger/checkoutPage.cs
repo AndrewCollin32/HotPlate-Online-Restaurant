@@ -11,6 +11,7 @@ namespace HotPlateBurger
         public static Label totalLabelSingle;
         public static Label orderTotalLabel;
         public static Label totalLabel;
+        public static FlowLayoutPanel checkoutLayout;
         public checkoutPage()
         {
             InitializeComponent();
@@ -18,6 +19,7 @@ namespace HotPlateBurger
             totalLabelSingle = totalLeft;
             orderTotalLabel = yourOrderLabel;
             totalLabel = yourTotalLabel;
+            checkoutLayout = checkoutFlowPanel;
             
             pictureBox2.ImageLocation = "https://www.merchantequip.com/image/?logos=v|m|a|d&height=32";
             tipBox.Items.Add("0%");

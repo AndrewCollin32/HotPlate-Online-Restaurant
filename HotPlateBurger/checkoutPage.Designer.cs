@@ -62,7 +62,7 @@ namespace HotPlateBurger
             this.panel2 = new System.Windows.Forms.Panel();
             this.totalLeft = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkoutFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -430,7 +430,7 @@ namespace HotPlateBurger
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.checkoutFlowPanel);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -439,15 +439,15 @@ namespace HotPlateBurger
             this.panel3.Size = new System.Drawing.Size(453, 738);
             this.panel3.TabIndex = 2;
             // 
-            // flowLayoutPanel1
+            // checkoutFlowPanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 45);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(453, 612);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.checkoutFlowPanel.AutoScroll = true;
+            this.checkoutFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkoutFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.checkoutFlowPanel.Location = new System.Drawing.Point(0, 45);
+            this.checkoutFlowPanel.Name = "checkoutFlowPanel";
+            this.checkoutFlowPanel.Size = new System.Drawing.Size(453, 612);
+            this.checkoutFlowPanel.TabIndex = 3;
             // 
             // panel4
             // 
@@ -521,7 +521,7 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.Label label9;
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel checkoutFlowPanel;
 
         private System.Windows.Forms.Label label8;
 

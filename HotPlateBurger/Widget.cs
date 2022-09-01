@@ -28,10 +28,10 @@ namespace HotPlateBurger
             Form1.total += Double.Parse(price);
             DashBoard.labelWithTotal.Text = "Total: $" + Form1.total.ToString("0.00");
             
-            addItem(id, Double.Parse(price), title);
+            addItem(id, Double.Parse(price), title, picture);
         }
 
-        public static void addItem(string id, double price, string title)
+        public static void addItem(string id, double price, string title, string picture)
         {
             if (Form1.basket.ContainsKey(id))
             {
@@ -39,7 +39,7 @@ namespace HotPlateBurger
             }
             else
             {
-                Form1.basket.Add(id, new object[]{1, price, title});
+                Form1.basket.Add(id, new object[]{1, price, title, picture});
             }
         }
 
