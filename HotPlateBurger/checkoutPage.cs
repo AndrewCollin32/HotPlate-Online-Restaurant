@@ -37,7 +37,11 @@ namespace HotPlateBurger
             tipBox.SelectedIndex = 3;
             
             totalLabelString.Text = "Order Total: \nTip: \nTaxes: \nDelivery Fee: \nGrand Total: ";
-            
+
+            checkoutFlowPanel.AutoScroll = false;
+            checkoutLayout.HorizontalScroll.Enabled = false;
+            checkoutLayout.AutoScroll = true;
+
         }
 
         private void button2_Click(object sender, EventArgs e)

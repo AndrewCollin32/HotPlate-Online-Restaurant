@@ -441,9 +441,7 @@ namespace HotPlateBurger
             // 
             // checkoutFlowPanel
             // 
-            this.checkoutFlowPanel.AutoScroll = true;
-            this.checkoutFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkoutFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.checkoutFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.checkoutFlowPanel.Location = new System.Drawing.Point(0, 45);
             this.checkoutFlowPanel.Name = "checkoutFlowPanel";
             this.checkoutFlowPanel.Size = new System.Drawing.Size(453, 612);

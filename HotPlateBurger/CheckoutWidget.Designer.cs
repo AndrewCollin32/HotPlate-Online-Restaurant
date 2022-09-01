@@ -31,7 +31,7 @@ namespace HotPlateBurger
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(int amount, string title, string picture)
+        private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.widgetTitle = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@ namespace HotPlateBurger
             this.widgetTitle.Name = "widgetTitle";
             this.widgetTitle.Size = new System.Drawing.Size(151, 67);
             this.widgetTitle.TabIndex = 2;
-            this.widgetTitle.Text = title;
+            this.widgetTitle.Text = "Double Cheese Burger";
             this.widgetTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // picturebox
@@ -76,7 +76,6 @@ namespace HotPlateBurger
             this.picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picturebox.TabIndex = 1;
             this.picturebox.TabStop = false;
-            this.picturebox.Image = Resources.ResourceManager.GetObject(picture) as Image;
             // 
             // widgetSize
             // 
@@ -86,7 +85,7 @@ namespace HotPlateBurger
             this.widgetSize.Name = "widgetSize";
             this.widgetSize.Size = new System.Drawing.Size(44, 43);
             this.widgetSize.TabIndex = 0;
-            this.widgetSize.Text = amount + "x";
+            this.widgetSize.Text = "3x";
             this.widgetSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2

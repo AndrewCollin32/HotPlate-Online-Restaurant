@@ -24,7 +24,7 @@ namespace HotPlateBurger
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            new AddItemFrame(title, picture).Show();
+            //new AddItemFrame(title, picture).Show();
             Form1.total += Double.Parse(price);
             DashBoard.labelWithTotal.Text = "Total: $" + Form1.total.ToString("0.00");
             
@@ -39,7 +39,7 @@ namespace HotPlateBurger
             }
             else
             {
-                Form1.basket.Add(id, new object[]{1, price, title, picture});
+                Form1.basket.Add(id, new object[]{1, price, title, picture, id});
             }
         }
 
