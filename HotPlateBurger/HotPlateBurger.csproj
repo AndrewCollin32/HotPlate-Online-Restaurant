@@ -144,6 +144,12 @@
         <Compile Include="ImplementSQL.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="UserSettingsPage.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UserSettingsPage.Designer.cs">
+          <DependentUpon>UserSettingsPage.cs</DependentUpon>
+        </Compile>
         <Compile Include="Widget.cs">
           <SubType>UserControl</SubType>
         </Compile>
@@ -183,6 +189,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="UserSettingsPage.resx">
+          <DependentUpon>UserSettingsPage.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Widget.resx">
           <DependentUpon>Widget.cs</DependentUpon>
         </EmbeddedResource>
