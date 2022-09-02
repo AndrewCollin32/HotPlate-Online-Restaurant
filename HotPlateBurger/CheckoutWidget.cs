@@ -27,6 +27,11 @@ namespace HotPlateBurger
             Form1.updateBasket();
             button.Text = "Add";
             button.BackColor = Color.Coral;
+
+            if (Form1.basket.Count == 0)
+            {
+                Form1.db.BringToFront();
+            }
             
         }
     }

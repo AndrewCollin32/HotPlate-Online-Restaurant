@@ -11,6 +11,6 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HotPlateBurger_002FForm1/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HotPlateBurger_002FProperties_002FResources/@EntryIndexedValue">False</s:Boolean>
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HotPlateBurger_002FWidget/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HotPlateBurger_002FWidget/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>

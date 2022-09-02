@@ -153,3 +153,5 @@ C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantrhhfgh\HotPlateBurger\obj
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantrhhfgh\HotPlateBurger\obj\Debug\HotPlateBurger.exe
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantrhhfgh\HotPlateBurger\obj\Debug\HotPlateBurger.pdb
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantrhhfgh\HotPlateBurger\obj\Debug\HotPlateBurger.CheckoutWidget.resources
+C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantrhhfgh\HotPlateBurger\obj\Debug\HotPlateBurger.AlertBox.resources
+C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantrhhfgh\HotPlateBurger\obj\Debug\HotPlateBurger.ConfirmationPage.resources

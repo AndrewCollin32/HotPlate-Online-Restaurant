@@ -173,13 +173,35 @@ namespace HotPlateBurger
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Form1.updateBasket();
-            Form1.cp.BringToFront();
+            if (Form1.basket.Count == 0)
+            {
+                new AlertBox("Cart Is Empty", "Can't open checkout page because your cart is empty").Show();
+            }
+            else
+            {
+                checkoutPage.fullnameLabelChild.Text = Form1.userName;
+                checkoutPage.fullnameLabelChild.ForeColor = Color.Black;
+                checkoutPage.emailLabelChild.Text = Form1.userEmail;
+                checkoutPage.phoneLabelChild.Text = Form1.userPhone;
+                Form1.cp.BringToFront();
+            }
         }
 
         private void totalLabel_Click(object sender, EventArgs e)
         {
             Form1.updateBasket();
-            Form1.cp.BringToFront();
+            if (Form1.basket.Count == 0)
+            {
+                new AlertBox("Cart Is Empty", "Can't open checkout page because your cart is empty").Show();
+            }
+            else
+            {
+                checkoutPage.fullnameLabelChild.Text = Form1.userName;
+                checkoutPage.fullnameLabelChild.ForeColor = Color.Black;
+                checkoutPage.emailLabelChild.Text = Form1.userEmail;
+                checkoutPage.phoneLabelChild.Text = Form1.userPhone;
+                Form1.cp.BringToFront();
+            }
         }
     }
 }

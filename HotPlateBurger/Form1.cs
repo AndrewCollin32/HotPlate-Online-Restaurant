@@ -14,6 +14,15 @@ namespace HotPlateBurger
 {
     public partial class Form1 : Form
     {
+        
+        public static string SQLDatabaseName = "hotplaterestaurant";
+        public static string SQLusername = "root";
+        public static string SQLPassword = "";
+        public static string SQLServer = "localhost";
+
+        public static string userEmail = "jacob42@gmal.com";
+        public static string userPhone = "619-818-3829";
+        public static string userName = "Jacob Burger";
 
         public static Dictionary<string, Object[]> basket;
 
@@ -22,27 +31,26 @@ namespace HotPlateBurger
         public static int taxAmount = 10;
         public static int tipPercentage;
         public static double deliveryFee = 5.00;
-        
-        public static string databaseName = "hotplaterestaurant";
-        public static string username = "root";
-        public static string password = "";
-        public static string server = "localhost";
 
         public static DashBoard db;
         public static checkoutPage cp;
+        public static ConfirmationPage conPage;
         
         public Form1()
         {
             InitializeComponent();
             basket = new Dictionary<string, object[]>();
             switchPanel = panelSwitch;
-            
+
+            conPage = new ConfirmationPage();
             db = new DashBoard();
             cp = new checkoutPage();
             panelSwitch.Controls.Add(cp);
             panelSwitch.Controls.Add(db);
+            panelSwitch.Controls.Add(conPage);
             cp.Dock = DockStyle.Fill;
             db.Dock = DockStyle.Fill;
+            conPage.Dock = DockStyle.Fill;
             db.BringToFront();
 
         }
@@ -61,6 +69,8 @@ namespace HotPlateBurger
                 checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key[i]][0], (string) basket[key[i]][2], (string) basket[key[i]][3], (string) basket[key[i]][4], (Button)basket[key[i]][5]));
             }
 
+            Form1.total = total;
+
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
             checkoutPage.orderTotalLabel.Text = orderTotal;
 
@@ -75,7 +85,7 @@ namespace HotPlateBurger
 
         public static MySqlDataReader executeSQL(String command)
         {
-            MySqlConnection conn = new MySqlConnection("SERVER=" + server + ";DATABASE=" + databaseName + ";UID=" + username + ";PASSWORD=" + password + ";");
+            MySqlConnection conn = new MySqlConnection("SERVER=" + SQLServer + ";DATABASE=" + SQLDatabaseName + ";UID=" + SQLusername + ";PASSWORD=" + SQLPassword + ";");
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(command, conn);
             return cmd.ExecuteReader();

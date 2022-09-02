@@ -99,6 +99,12 @@
         <Compile Include="AddItemFrame.Designer.cs">
           <DependentUpon>AddItemFrame.cs</DependentUpon>
         </Compile>
+        <Compile Include="AlertBox.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AlertBox.Designer.cs">
+          <DependentUpon>AlertBox.cs</DependentUpon>
+        </Compile>
         <Compile Include="AllFrame.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -116,6 +122,12 @@
         </Compile>
         <Compile Include="CheckoutWidget.Designer.cs">
           <DependentUpon>CheckoutWidget.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ConfirmationPage.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="ConfirmationPage.Designer.cs">
+          <DependentUpon>ConfirmationPage.cs</DependentUpon>
         </Compile>
         <Compile Include="DashBoard.cs">
           <SubType>UserControl</SubType>
@@ -141,6 +153,9 @@
         <EmbeddedResource Include="AddItemFrame.resx">
           <DependentUpon>AddItemFrame.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="AlertBox.resx">
+          <DependentUpon>AlertBox.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="AllFrame.resx">
           <DependentUpon>AllFrame.cs</DependentUpon>
         </EmbeddedResource>
@@ -149,6 +164,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="CheckoutWidget.resx">
           <DependentUpon>CheckoutWidget.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="ConfirmationPage.resx">
+          <DependentUpon>ConfirmationPage.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="DashBoard.resx">
           <DependentUpon>DashBoard.cs</DependentUpon>

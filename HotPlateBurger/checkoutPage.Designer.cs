@@ -34,15 +34,15 @@ namespace HotPlateBurger
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(checkoutPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.expDateLabel = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.phoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cardNumberMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.totalLabelString = new System.Windows.Forms.Label();
             this.tipBox = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.FullNameTextbox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cwTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,15 +77,15 @@ namespace HotPlateBurger
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.expDateLabel);
-            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.phoneTextBox);
             this.panel1.Controls.Add(this.cardNumberMaskedTextBox);
             this.panel1.Controls.Add(this.totalLabelString);
             this.panel1.Controls.Add(this.tipBox);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.FullNameTextbox);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.cwTextBox);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.emailTextBox);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -120,14 +120,14 @@ namespace HotPlateBurger
             this.expDateLabel.Enter += new System.EventHandler(this.expDateLabel_Enter);
             this.expDateLabel.Leave += new System.EventHandler(this.expDateLabel_Leave);
             // 
-            // maskedTextBox1
+            // phoneTextBox
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(108, 682);
-            this.maskedTextBox1.Mask = "000-000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(270, 33);
-            this.maskedTextBox1.TabIndex = 21;
+            this.phoneTextBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTextBox.Location = new System.Drawing.Point(108, 682);
+            this.phoneTextBox.Mask = "000-000-0000";
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(270, 33);
+            this.phoneTextBox.TabIndex = 21;
             // 
             // cardNumberMaskedTextBox
             // 
@@ -164,18 +164,18 @@ namespace HotPlateBurger
             this.tipBox.TabIndex = 18;
             this.tipBox.SelectedIndexChanged += new System.EventHandler(this.tipBox_SelectedIndexChanged);
             // 
-            // textBox4
+            // FullNameTextbox
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox4.Location = new System.Drawing.Point(473, 547);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(346, 33);
-            this.textBox4.TabIndex = 17;
-            this.textBox4.Text = "Full Name";
-            this.textBox4.Enter += new System.EventHandler(this.fullNameTextBox_Enter);
-            this.textBox4.Leave += new System.EventHandler(this.fullNameTextBox_Leave);
+            this.FullNameTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.FullNameTextbox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.FullNameTextbox.Location = new System.Drawing.Point(473, 547);
+            this.FullNameTextbox.Name = "FullNameTextbox";
+            this.FullNameTextbox.Size = new System.Drawing.Size(346, 33);
+            this.FullNameTextbox.TabIndex = 17;
+            this.FullNameTextbox.Text = "Full Name";
+            this.FullNameTextbox.Enter += new System.EventHandler(this.fullNameTextBox_Enter);
+            this.FullNameTextbox.Leave += new System.EventHandler(this.fullNameTextBox_Leave);
             // 
             // pictureBox2
             // 
@@ -212,14 +212,14 @@ namespace HotPlateBurger
             this.label15.TabIndex = 13;
             this.label15.Text = "Your Order:";
             // 
-            // textBox2
+            // emailTextBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(109, 636);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 33);
-            this.textBox2.TabIndex = 12;
+            this.emailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.emailTextBox.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(109, 636);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(270, 33);
+            this.emailTextBox.TabIndex = 12;
             // 
             // label13
             // 
@@ -492,7 +492,7 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.MaskedTextBox expDateLabel;
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox phoneTextBox;
 
         private System.Windows.Forms.MaskedTextBox cardNumberMaskedTextBox;
 
@@ -500,7 +500,7 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.ComboBox tipBox;
 
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox FullNameTextbox;
 
         private System.Windows.Forms.PictureBox pictureBox2;
 
@@ -510,7 +510,7 @@ namespace HotPlateBurger
         private System.Windows.Forms.Label label15;
 
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label label13;
 
         private System.Windows.Forms.Label label11;

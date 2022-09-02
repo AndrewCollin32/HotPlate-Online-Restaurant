@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace HotPlateBurger
@@ -12,10 +13,18 @@ namespace HotPlateBurger
         public static Label orderTotalLabel;
         public static Label totalLabel;
         public static FlowLayoutPanel checkoutLayout;
+
+        public static TextBox fullnameLabelChild;
+        public static TextBox emailLabelChild;
+        public static MaskedTextBox phoneLabelChild;
         public checkoutPage()
         {
             InitializeComponent();
 
+            fullnameLabelChild = FullNameTextbox;
+            emailLabelChild = emailTextBox;
+            phoneLabelChild = phoneTextBox;
+            
             totalLabelSingle = totalLeft;
             orderTotalLabel = yourOrderLabel;
             totalLabel = yourTotalLabel;
@@ -51,7 +60,39 @@ namespace HotPlateBurger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            if (!new Regex(@"^\w+@\w+\.com$").IsMatch(emailTextBox.Text))
+            {
+                new AlertBox("Email Address", "Please enter a valid email address").Show();
+                return;
+            }
+            if (!new Regex(@"^\d{3}-\d{3}-\d{4}$").IsMatch(phoneTextBox.Text))
+            {
+                new AlertBox("Phone Number", "Please enter your phone number in this format: \n000-000-0000").Show();
+                return;
+            }
+            if (FullNameTextbox.Text.Length == 0)
+            {
+                new AlertBox("Full Name", "Please enter your full name").Show();
+                return;
+            }
+            if (!new Regex(@"^\d{4}-\d{4}-\d{4}-\d{4}$").IsMatch(cardNumberMaskedTextBox.Text))
+            {
+                new AlertBox("Card Number", "Please enter a valid card number").Show();
+                return;
+            }
+            if (!new Regex(@"^\d{3}$").IsMatch(cwTextBox.Text))
+            {
+                new AlertBox("CW", "Please enter a valid CW number").Show();
+                return;
+            }
+            if (!new Regex(@"^(([0][1-9])|([1][012]))/\d{2}$").IsMatch(expDateLabel.Text))
+            {
+                new AlertBox("Expiration Date", "Please enter a EXP date for card").Show();
+                return;
+            }
+            
+            Form1.conPage.BringToFront();
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -82,19 +123,19 @@ namespace HotPlateBurger
 
         private void fullNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (textBox4.Text == "Full Name")
+            if (FullNameTextbox.Text == "Full Name")
             {
-                textBox4.Text = "";
-                textBox4.ForeColor = Color.Black;
+                FullNameTextbox.Text = "";
+                FullNameTextbox.ForeColor = Color.Black;
             }
         }
 
         private void fullNameTextBox_Leave(object sender, EventArgs e)
         {
-            if (textBox4.Text == "")
+            if (FullNameTextbox.Text == "")
             {
-                textBox4.Text = "Full Name";
-                textBox4.ForeColor = Color.DimGray;
+                FullNameTextbox.Text = "Full Name";
+                FullNameTextbox.ForeColor = Color.DimGray;
             }
         }
 
