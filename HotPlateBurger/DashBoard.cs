@@ -52,6 +52,7 @@ namespace HotPlateBurger
                 Widget w = new Widget("" + reader[2], "" + reader[3], "" + reader[4], "" + reader[1], "" + reader[0]);
                 widgetArray.Add(w);
             }
+            Form1.SQLconn.Close();
         }
 
         public void loadWidgetForFrame(string category)

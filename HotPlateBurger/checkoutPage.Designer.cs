@@ -51,7 +51,7 @@ namespace HotPlateBurger
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@ namespace HotPlateBurger
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.addressTextBox);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -310,17 +310,17 @@ namespace HotPlateBurger
             this.label7.Size = new System.Drawing.Size(2, 786);
             this.label7.TabIndex = 3;
             // 
-            // label6
+            // addressTextBox
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(401, 430);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(360, 42);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "3738 Middles St Apt #40, San Diego CA 92147";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addressTextBox.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.ForeColor = System.Drawing.Color.White;
+            this.addressTextBox.Location = new System.Drawing.Point(401, 430);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(360, 42);
+            this.addressTextBox.TabIndex = 7;
+            this.addressTextBox.Text = "3738 Middles St Apt #40, San Diego CA 92147";
+            this.addressTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -525,7 +525,7 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.Label label7;
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label addressTextBox;
 
         private System.Windows.Forms.Button button2;
 

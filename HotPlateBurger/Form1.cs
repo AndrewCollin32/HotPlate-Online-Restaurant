@@ -27,6 +27,7 @@ namespace HotPlateBurger
         public static Dictionary<string, Object[]> basket;
 
         public static double total = 0;
+        public static double gtotal = 0;
         public static Panel switchPanel;
         public static int taxAmount = 10;
         public static int tipPercentage;
@@ -35,6 +36,9 @@ namespace HotPlateBurger
         public static DashBoard db;
         public static checkoutPage cp;
         public static ConfirmationPage conPage;
+        public static UserSettingsPage usp;
+
+        public static MySqlConnection SQLconn;
         
         public Form1()
         {
@@ -45,12 +49,15 @@ namespace HotPlateBurger
             conPage = new ConfirmationPage();
             db = new DashBoard();
             cp = new checkoutPage();
+            usp = new UserSettingsPage();
             panelSwitch.Controls.Add(cp);
             panelSwitch.Controls.Add(db);
             panelSwitch.Controls.Add(conPage);
+            panelSwitch.Controls.Add(usp);
             cp.Dock = DockStyle.Fill;
             db.Dock = DockStyle.Fill;
             conPage.Dock = DockStyle.Fill;
+            usp.Dock = DockStyle.Fill;
             db.BringToFront();
 
         }
@@ -79,26 +86,27 @@ namespace HotPlateBurger
                                       "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
             checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
             checkoutPage.totalLabel.Text = totalCalculation;
-            
 
+            gtotal = grandTotal;
         }
 
         public static MySqlDataReader executeSQL(String command)
         {
             MySqlConnection conn = new MySqlConnection("SERVER=" + SQLServer + ";DATABASE=" + SQLDatabaseName + ";UID=" + SQLusername + ";PASSWORD=" + SQLPassword + ";");
             conn.Open();
+            SQLconn = conn;
             MySqlCommand cmd = new MySqlCommand(command, conn);
             return cmd.ExecuteReader();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+            usp.BringToFront();
         }
 
         private void nameLabel_Click(object sender, EventArgs e)
         {
-            
+            usp.BringToFront();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

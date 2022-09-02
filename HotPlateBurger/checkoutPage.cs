@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HotPlateBurger
 {
@@ -90,7 +92,29 @@ namespace HotPlateBurger
                 new AlertBox("Expiration Date", "Please enter a EXP date for card").Show();
                 return;
             }
+
+            string confirmationCode = Guid.NewGuid().ToString("N").Substring(0, 10).ToUpper();
+            Debug.WriteLine(totalLabel.Text + " " + totalLeft.Text);
+            string order = "";
+            String[] key = Form1.basket.Keys.ToArray();
+            for (int i = 0; i < Form1.basket.Count; i++)
+            {
+                order = order + Form1.basket[key[i]][0] + "x " + (string)Form1.basket[key[i]][2] + " | ";
+            }
             
+            MySqlConnection conn = new MySqlConnection("SERVER=" + Form1.SQLServer + ";DATABASE=" + Form1.SQLDatabaseName + ";UID=" + Form1.SQLusername + ";PASSWORD=" + Form1.SQLPassword + ";");
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO ordertable VALUES(@confirmCode,@fullname,@total,@Time,@address,@email,@phone,@order);", conn);
+            cmd.Parameters.AddWithValue("@confirmCode", confirmationCode);
+            cmd.Parameters.AddWithValue("@fullname", FullNameTextbox.Text);
+            cmd.Parameters.AddWithValue("@total", "$" + Form1.gtotal.ToString("0.00"));
+            cmd.Parameters.AddWithValue("@order", order);
+            cmd.Parameters.AddWithValue("@address", addressTextBox.Text);
+            cmd.Parameters.AddWithValue("@email", emailTextBox.Text);
+            cmd.Parameters.AddWithValue("@phone", phoneTextBox.Text);
+            cmd.Parameters.AddWithValue("@Time", DateTime.Now.ToString("HH:mm:ss tt"));
+            cmd.ExecuteNonQuery();
+
             Form1.conPage.BringToFront();
 
         }

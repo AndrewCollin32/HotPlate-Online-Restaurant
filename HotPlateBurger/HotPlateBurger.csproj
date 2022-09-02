@@ -93,12 +93,6 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="AddItemFrame.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="AddItemFrame.Designer.cs">
-          <DependentUpon>AddItemFrame.cs</DependentUpon>
-        </Compile>
         <Compile Include="AlertBox.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -156,9 +150,6 @@
         <Compile Include="Widget.Designer.cs">
           <DependentUpon>Widget.cs</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="AddItemFrame.resx">
-          <DependentUpon>AddItemFrame.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="AlertBox.resx">
           <DependentUpon>AlertBox.cs</DependentUpon>
         </EmbeddedResource>

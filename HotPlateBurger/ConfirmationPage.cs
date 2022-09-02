@@ -21,7 +21,10 @@ namespace HotPlateBurger
                 ((Button)Form1.basket[key[i]][5]).BackColor = Color.Coral;
                 Form1.basket.Remove(key[i]);
             }
-            
+
+            Form1.gtotal = 0;
+            Form1.total = 0;
+
             Form1.cp = new checkoutPage();
             Form1.switchPanel.Controls.Add(Form1.cp);
             Form1.cp.Dock = DockStyle.Fill;

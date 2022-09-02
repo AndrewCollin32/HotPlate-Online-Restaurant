@@ -9,7 +9,7 @@ namespace HotPlateBurger
         // static void Main()
         // {
         //     MySqlConnection conn =
-        //         new MySqlConnection("SERVER=" + Form1.server + ";DATABASE=" + Form1.databaseName + ";UID=" + Form1.username + ";PASSWORD=" + Form1.password + ";");
+        //         new MySqlConnection("SERVER=" + Form1.SQLServer + ";DATABASE=" + Form1.SQLDatabaseName + ";UID=" + Form1.SQLusername + ";PASSWORD=" + Form1.SQLPassword + ";");
         //     conn.Open();
         //     createTable(conn);
         //     insertSampleMenu(conn);
@@ -27,12 +27,16 @@ namespace HotPlateBurger
                                                 "PRIMARY KEY (`ID`));", conn);
             cmd.ExecuteNonQuery();
 
-            cmd = new MySqlCommand("CREATE TABLE `hotplaterestaurant`.`ordertable` (" +
-                                   "`CustomerID` VARCHAR(40) NOT NULL," +
-                                   "`CustomerName` VARCHAR(45) NOT NULL," +
-                                   "`Total` INT NOT NULL," +
-                                   "`Order` VARCHAR(500) NULL," +
-                                   "PRIMARY KEY (`CustomerID`));", conn);
+            cmd = new MySqlCommand("CREATE TABLE `ordertable` (" +
+                                   "`Confirmation ID` varchar(40) NOT NULL," +
+                                   "`CustomerName` varchar(45) NOT NULL," +
+                                   "`Total` varchar(10) NOT NULL," +
+                                   "`Time` varchar(45) NOT NULL," +
+                                   "`Address` varchar(200) NOT NULL," +
+                                   "`Email` varchar(100) NOT NULL," +
+                                   "`Phone` varchar(12) NOT NULL," +
+                                   "`Order` varchar(500) NOT NULL," +
+                                   "PRIMARY KEY (`Confirmation ID`));", conn);
 
             cmd.ExecuteNonQuery();
         }
