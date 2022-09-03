@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
+// This program was created by Andrew Collin
+
 namespace HotPlateBurger
 {
     static class Program
@@ -12,9 +15,8 @@ namespace HotPlateBurger
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        
-        
-        
+
+        //Comment begins here
         
         [STAThread]
         static void Main()
@@ -23,5 +25,7 @@ namespace HotPlateBurger
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        
+        //Comment ends here
     }
 }

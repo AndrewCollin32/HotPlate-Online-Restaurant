@@ -32,12 +32,12 @@ namespace HotPlateBurger
         // You'll need to make a database first before you start the program.
         // Look below for further instructions
         
-        public static string SQLDatabaseName = "hotplaterestaurant";
-        public static string SQLusername = "root";
+        public static string SQLDatabaseName = "";
+        public static string SQLusername = "";
         public static string SQLPassword = "";
-        public static string SQLServer = "localhost";
+        public static string SQLServer = "";
         
-        // Once you are done creating your database and inputing your information, you need to go to Program.CS
+        // Once you are done creating your database and inputting your information, you need to go to Program.CS
         // and comment out the main function. Then you need to go to ImplementSQL.cs and uncomment the static void main
         // function. Compile ImplementSQL.cs This program will automatically build your tables for you. It will also
         // give you a sample menu you can work from. Once it is done compiling. (If you want to delete all of your data
