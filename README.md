@@ -15,6 +15,7 @@ HotPlate Online is a simple program that allows customers to order food online a
     <li><a href = #Confirmation_Page> Confirmation Page </a></li>
     <li><a href = #User_Settings> User Settings </a></li>
   </ul>
+  <li><a href = #setup>Setup</a></li>
 </ul>
 
 # Technologies
@@ -63,3 +64,7 @@ Once the check out page validates all of your input, it will bring you to the co
 ![Hotplate UserSettings](https://user-images.githubusercontent.com/109395254/188253682-e05caac0-c728-4c02-8bde-c2a8f8412646.PNG)
 
 <hr>
+
+Clicking your name or the icon on the upper right will take you to user settings. In user settings, you can change your address, your name, your email and your phone number. This is the only location where you can change your address. Additionally you can also give a note to the driver on how to access your property. By clicking the submit button, it will validate your input and save it to the program. 
+
+# Setup
