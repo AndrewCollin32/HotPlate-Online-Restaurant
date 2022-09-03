@@ -6,6 +6,7 @@ namespace HotPlateBurger
 {
     public partial class UserSettingsPage : UserControl
     {
+        //An array that holds every state's acronyms in the U.S.
         public static string[] stateArray =
         {
             "AL", "AK", "AZ", "AR", "AS", "CA", "CO", "CT", "DE", "DC", "FL","GA",
@@ -13,6 +14,7 @@ namespace HotPlateBurger
             "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "CM", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
             "TN", "TX", "TT", "UT", "VT", "VA", "VI", "WA", "WV", "WI", "WY"
         };
+        // Initializes the UserSettingsPage, adds all the states to the combobox and calls fillEverything()
         public UserSettingsPage()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace HotPlateBurger
             fillEverything();
         }
 
+        // Fills all the textboxes with existing information
         public void fillEverything()
         {
             fullNameTextBox.Text = Form1.userName;
@@ -39,12 +42,14 @@ namespace HotPlateBurger
             notesTextBox.Text = Form1.userNotes;
         }
 
+        //Takes users to the previous page
         private void backButton_Click(object sender, EventArgs e)
         {
             fillEverything();
             Form1.previousPage.BringToFront();
         }
 
+        //Validates and saves all the data to Form1.cs and takes the user back to the previous page.
         private void saveButton_Click(object sender, EventArgs e)
         {
             if (!new Regex(@"^\w+@\w+\.com$").IsMatch(emailTextBox.Text))

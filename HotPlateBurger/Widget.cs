@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace HotPlateBurger
 {
+    //Widgets that are generated for the main page. 
     public partial class Widget : UserControl
     {
 

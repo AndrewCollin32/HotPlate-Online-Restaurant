@@ -133,6 +133,7 @@ namespace HotPlateBurger
             cmd.ExecuteNonQuery();
 
             ConfirmationPage.confirmationNumberText.Text = "Your Confirmation Number: " + confirmationCode;
+            Form1.previousPage = Form1.conPage;
             Form1.conPage.BringToFront();
 
         }

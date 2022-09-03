@@ -6,6 +6,7 @@ using HotPlateBurger.Properties;
 
 namespace HotPlateBurger
 {
+    //This is the checkout widget. It is the widget that is generated when you are in the checkout page on the left.
     public partial class CheckoutWidget : UserControl
     {
 

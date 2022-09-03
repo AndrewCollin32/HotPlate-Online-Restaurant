@@ -7,16 +7,25 @@ using MySql.Data.MySqlClient;
 
 namespace HotPlateBurger
 {
+    //The dashboard user controls form is the main page that features all the different category buttons
     public partial class DashBoard : UserControl
     {
 
+        //The label that displays the total in the bottom left
         public static Label labelWithTotal;
 
+        //Previous button basically stores the previous button you've pressed in the category.
+        // This is to change the color of the button once the user makes another choice
         public static Button previousButton;
 
+        // Panel that carries AllFrames.cs
         public static AllFrame allFrame;
 
+        // Array that carries every food card that was loaded from the database
         public ArrayList widgetArray;
+        
+        //Initialize the Dashboard User Controls Panel
+        //Loads all the widgets to AllFrame.cs
         public DashBoard()
         {
             InitializeComponent();
@@ -34,6 +43,7 @@ namespace HotPlateBurger
 
         }
 
+        //Function made specifically to load AllFrame.cs
         public void loadForm(Object form)
         {
             Form f = form as Form;
@@ -44,6 +54,7 @@ namespace HotPlateBurger
             f.Show();
         }
 
+        //Loads all the widgets to the widgetArray from the SQL database.
         public void loadWidgets()
         {
             MySqlDataReader reader = Form1.executeSQL("SELECT * FROM foodtable");
@@ -55,6 +66,7 @@ namespace HotPlateBurger
             Form1.SQLconn.Close();
         }
 
+        //Adds the proper widgets to AllFrame flowlayoutpanel from the widgetArray to the specified category.
         public void loadWidgetForFrame(string category)
         {
             switch (category)
@@ -180,6 +192,7 @@ namespace HotPlateBurger
             }
             else
             {
+                Form1.previousPage = Form1.cp;
                 checkoutPage.updateCP();
                 Form1.cp.BringToFront();
             }
@@ -194,6 +207,7 @@ namespace HotPlateBurger
             }
             else
             {
+                Form1.previousPage = Form1.cp;
                 checkoutPage.updateCP();
                 Form1.cp.BringToFront();
             }

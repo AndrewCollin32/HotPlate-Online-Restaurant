@@ -14,7 +14,7 @@ namespace HotPlateBurger
             confirmationNumberText = confirmationNumberLabel;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void okButtonClick(object sender, EventArgs e)
         {
             String[] key = Form1.basket.Keys.ToArray();
             for (int i = 0; i < key.Length; i++)
@@ -31,6 +31,7 @@ namespace HotPlateBurger
             Form1.switchPanel.Controls.Add(Form1.cp);
             Form1.cp.Dock = DockStyle.Fill;
             Form1.updateBasket();
+            Form1.previousPage = Form1.db;
             Form1.db.BringToFront();
         }
     }

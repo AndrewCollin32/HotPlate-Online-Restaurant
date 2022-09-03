@@ -158,14 +158,12 @@ namespace HotPlateBurger
         // Function that is triggered when you click on your profile picture. Takes you to the usersettings page.
         private void avatarLogoClick(object sender, EventArgs e)
         {
-            previousPage = db;
             usp.BringToFront();
         }
 
         // Function that is triggered when you click on your name. Takes you to the usersettings page.
         private void nameLabel_Click(object sender, EventArgs e)
         {
-            previousPage = db;
             usp.BringToFront();
         }
 
