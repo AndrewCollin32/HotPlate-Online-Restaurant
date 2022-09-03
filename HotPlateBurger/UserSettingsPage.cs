@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace HotPlateBurger
@@ -41,8 +42,46 @@ namespace HotPlateBurger
         private void backButton_Click(object sender, EventArgs e)
         {
             fillEverything();
-            Form1.db.BringToFront();
+            Form1.previousPage.BringToFront();
         }
-        
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (!new Regex(@"^\w+@\w+\.com$").IsMatch(emailTextBox.Text))
+            {
+                new AlertBox("Email Address", "Please enter a valid email address").Show();
+                return;
+            }
+            if (!new Regex(@"^\d{3}-\d{3}-\d{4}$").IsMatch(phoneTextBox.Text))
+            {
+                new AlertBox("Phone Number", "Please enter your phone number in this format: \n000-000-0000").Show();
+                return;
+            }
+            if (fullNameTextBox.Text.Length == 0)
+            {
+                new AlertBox("Full Name", "Please enter your full name").Show();
+                return;
+            }
+
+            if (addressTextBox.Text.Length == 0 || cityTextBox.Text.Length == 0 || postalCodeTextBox.Text.Length == 0)
+            {
+                new AlertBox("Address", "Please enter a valid address").Show();
+                return;
+            }
+
+            Form1.userName = fullNameTextBox.Text;
+            Form1.userEmail = emailTextBox.Text;
+            Form1.userPhone = phoneTextBox.Text;
+
+            Form1.userCompany = companyTextBox.Text;
+            Form1.userAddressline = addressTextBox.Text;
+            Form1.userCity = cityTextBox.Text;
+            Form1.userState = stateComboBox.SelectedItem.ToString();
+            Form1.userPostalNumber = postalCodeTextBox.Text;
+            Form1.userNotes = notesTextBox.Text;
+            
+            checkoutPage.updateCP();
+            Form1.previousPage.BringToFront();
+        }
     }
 }

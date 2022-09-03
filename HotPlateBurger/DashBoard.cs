@@ -180,10 +180,7 @@ namespace HotPlateBurger
             }
             else
             {
-                checkoutPage.fullnameLabelChild.Text = Form1.userName;
-                checkoutPage.fullnameLabelChild.ForeColor = Color.Black;
-                checkoutPage.emailLabelChild.Text = Form1.userEmail;
-                checkoutPage.phoneLabelChild.Text = Form1.userPhone;
+                checkoutPage.updateCP();
                 Form1.cp.BringToFront();
             }
         }
@@ -197,10 +194,7 @@ namespace HotPlateBurger
             }
             else
             {
-                checkoutPage.fullnameLabelChild.Text = Form1.userName;
-                checkoutPage.fullnameLabelChild.ForeColor = Color.Black;
-                checkoutPage.emailLabelChild.Text = Form1.userEmail;
-                checkoutPage.phoneLabelChild.Text = Form1.userPhone;
+                checkoutPage.updateCP();
                 Form1.cp.BringToFront();
             }
         }

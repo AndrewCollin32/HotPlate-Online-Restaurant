@@ -20,7 +20,7 @@ namespace HotPlateBurger
         public static string SQLPassword = "";
         public static string SQLServer = "localhost";
 
-        public static string userEmail = "jacob42@gmal.com";
+        public static string userEmail = "jacob42@gmail.com";
         public static string userPhone = "619-818-3829";
         public static string userName = "Jacob Burger";
         public static string userCompany = "";
@@ -29,6 +29,8 @@ namespace HotPlateBurger
         public static string userState = "CA";
         public static string userPostalNumber = "92142";
         public static string userNotes = "Use back door.";
+
+        public static UserControl previousPage;
 
         public static Dictionary<string, Object[]> basket;
 
@@ -107,11 +109,13 @@ namespace HotPlateBurger
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            previousPage = db;
             usp.BringToFront();
         }
 
         private void nameLabel_Click(object sender, EventArgs e)
         {
+            previousPage = db;
             usp.BringToFront();
         }
 

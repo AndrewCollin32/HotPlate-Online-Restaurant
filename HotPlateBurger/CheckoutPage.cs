@@ -19,10 +19,14 @@ namespace HotPlateBurger
         public static TextBox fullnameLabelChild;
         public static TextBox emailLabelChild;
         public static MaskedTextBox phoneLabelChild;
+
+        public static Label addressLabelChild;
         public checkoutPage()
         {
             InitializeComponent();
 
+            addressLabelChild = addressTextBox;
+            
             fullnameLabelChild = FullNameTextbox;
             emailLabelChild = emailTextBox;
             phoneLabelChild = phoneTextBox;
@@ -57,7 +61,20 @@ namespace HotPlateBurger
 
         private void button2_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            Form1.previousPage = Form1.cp;
+            Form1.usp.BringToFront();
+        }
+
+        public static void updateCP()
+        {
+            fullnameLabelChild.Text = Form1.userName;
+            fullnameLabelChild.ForeColor = Color.Black;
+            emailLabelChild.Text = Form1.userEmail;
+            phoneLabelChild.Text = Form1.userPhone;
+
+            addressLabelChild.Text = Form1.userCompany + " " + Form1.userAddressline + ", " + Form1.userCity + ", " +
+                                     Form1.userState + " " + Form1.userPostalNumber;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
