@@ -75,7 +75,7 @@ namespace HotPlateBurger
         public static double total = 0;
         public static double gtotal = 0;
         
-        //Switch Panel is the panel that is used to switch between UserSettings, Checkout, Dashboard and Confrmation Pages
+        //Switch Panel is the panel that is used to switch between UserSettings, Checkout, Dashboard and Confirmation Pages
         public static Panel switchPanel;
         
         // Tax amount, tip percentage and delivery fee
@@ -115,6 +115,9 @@ namespace HotPlateBurger
 
         }
 
+        // The function updates the total and gTotal with all the items in the shopping basket.
+        // This function will also alter the checkout page by adding widgets to the left and  
+        // adding the calculated total to the labels.
         public static void updateBasket()
         {
 
@@ -152,19 +155,22 @@ namespace HotPlateBurger
             return cmd.ExecuteReader();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        // Function that is triggered when you click on your profile picture. Takes you to the usersettings page.
+        private void avatarLogoClick(object sender, EventArgs e)
         {
             previousPage = db;
             usp.BringToFront();
         }
 
+        // Function that is triggered when you click on your name. Takes you to the usersettings page.
         private void nameLabel_Click(object sender, EventArgs e)
         {
             previousPage = db;
             usp.BringToFront();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        // Function that is triggered when you click on your HotPlate Logo. Takes you to the dashboard page.
+        private void hotPlateLogoClick(object sender, EventArgs e)
         {
             db.BringToFront();
         }
