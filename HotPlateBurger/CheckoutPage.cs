@@ -115,6 +115,7 @@ namespace HotPlateBurger
             cmd.Parameters.AddWithValue("@Time", DateTime.Now.ToString("HH:mm:ss tt"));
             cmd.ExecuteNonQuery();
 
+            ConfirmationPage.confirmationNumberText.Text = "Your Confirmation Number: " + confirmationCode;
             Form1.conPage.BringToFront();
 
         }

@@ -23,6 +23,12 @@ namespace HotPlateBurger
         public static string userEmail = "jacob42@gmal.com";
         public static string userPhone = "619-818-3829";
         public static string userName = "Jacob Burger";
+        public static string userCompany = "";
+        public static string userAddressline = "4732 Widow St";
+        public static string userCity = "San Diego";
+        public static string userState = "CA";
+        public static string userPostalNumber = "92142";
+        public static string userNotes = "Use back door.";
 
         public static Dictionary<string, Object[]> basket;
 

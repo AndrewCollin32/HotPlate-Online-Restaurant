@@ -105,11 +105,11 @@
         <Compile Include="AllFrame.Designer.cs">
           <DependentUpon>AllFrame.cs</DependentUpon>
         </Compile>
-        <Compile Include="checkoutPage.cs">
+        <Compile Include="CheckoutPage.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="checkoutPage.Designer.cs">
-          <DependentUpon>checkoutPage.cs</DependentUpon>
+        <Compile Include="CheckoutPage.Designer.cs">
+          <DependentUpon>CheckoutPage.cs</DependentUpon>
         </Compile>
         <Compile Include="CheckoutWidget.cs">
           <SubType>UserControl</SubType>
@@ -156,8 +156,8 @@
         <EmbeddedResource Include="AllFrame.resx">
           <DependentUpon>AllFrame.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="checkoutPage.resx">
-          <DependentUpon>checkoutPage.cs</DependentUpon>
+        <EmbeddedResource Include="CheckoutPage.resx">
+          <DependentUpon>CheckoutPage.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="CheckoutWidget.resx">
           <DependentUpon>CheckoutWidget.cs</DependentUpon>

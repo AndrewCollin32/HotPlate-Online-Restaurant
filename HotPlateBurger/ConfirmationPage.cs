@@ -7,9 +7,11 @@ namespace HotPlateBurger
 {
     public partial class ConfirmationPage : UserControl
     {
+        public static Label confirmationNumberText;
         public ConfirmationPage()
         {
             InitializeComponent();
+            confirmationNumberText = confirmationNumberLabel;
         }
 
         private void button1_Click(object sender, EventArgs e)
