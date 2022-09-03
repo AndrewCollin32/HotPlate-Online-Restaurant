@@ -16,6 +16,10 @@ HotPlate Online is a simple program that allows customers to order food online a
     <li><a href = #User_Settings> User Settings </a></li>
   </ul>
   <li><a href = #setup>Setup</a></li>
+  <ul>
+    <li><a href = #Installation>Install</a></li>
+    <li><a href = #Setup_SQL> Setup SQL</a></li>
+  </ul>
 </ul>
 
 # Technologies
@@ -68,3 +72,50 @@ Once the check out page validates all of your input, it will bring you to the co
 Clicking your name or the icon on the upper right will take you to user settings. In user settings, you can change your address, your name, your email and your phone number. This is the only location where you can change your address. Additionally you can also give a note to the driver on how to access your property. By clicking the submit button, it will validate your input and save it to the program. 
 
 # Setup
+
+# Installation
+
+To install this program, you'll have to open up Git Bash in your ideal location. Then type this command down: <br>
+<code> git clone https://github.com/AndrewCollin32/HotPlate-Online-Restaurant.git </code> <br>
+It will automatically download everything into your prefered file. 
+
+# Setup_SQL
+
+Steps:
+<ul>
+  <li>Build your database</li>
+  <li>Run ImplimentSQL.cs so it can automaically build your tables and insert data</li>
+  <li>Run Program.cs</li>
+</ul>
+MySQL is required for this program. You'll need to create a database first before you can use this program.
+Once you created your database, you'll need these 4 items:
+<ul>
+  <li>Database Name</li>
+  <li>Server Name</li>
+  <li>Username</li>
+  <li>Password</li>
+</ul>
+
+Once you got all the information, go to <code>HotplateRestaurant/HotPlateBurger/Windows.cs</code>. <br>
+Your screen should look like this:
+![HotPlateSQLSetup](https://user-images.githubusercontent.com/109395254/188287050-f712df96-81e5-4841-a7f2-f0f4246db80d.PNG)
+Enter down your database name, server name, username and password. 
+
+
+Then go to <code>HotPlateRestaurant/HotPlateBurger/ImplementSQL.cs</code> You should see this screen:
+![HotPlate SQLImplemntation Comment Off](https://user-images.githubusercontent.com/109395254/188287004-f2b0d16b-98e0-4719-a46c-659011638c2b.PNG)
+Uncomment the block of code. Your code should look like this after:
+![HotPlateSQL Implementation Comment Off](https://user-images.githubusercontent.com/109395254/188287236-aca6b690-8b75-4c0a-ac42-32432b3bf609.PNG)
+Noticed that once you uncomment your code, it started to show an error in your IDE. Don't worry, there is one extra step you have to do. 
+This error occurs when there are more than one entry points. You'll need to go to <code>HotPlateRestaurant/HotPlateBurger/Program.cs</code>. You should see this screen:
+![Hotplate Program  cs Comment On](https://user-images.githubusercontent.com/109395254/188287287-ec41581c-cca4-4d4f-b277-ff79b859c2f1.PNG)
+Uncomment the block of code. Your code should look like this:
+![HotPlate Program comment on](https://user-images.githubusercontent.com/109395254/188287298-c31f5d52-946e-42ed-85b5-eeed3f0a911b.PNG)
+<br>
+Now the program is running. ImplimentSQL.cs should run. After it is finished, you can double check your database to see if there are two tables in there. The two tables are named: foodtable and ordertable.
+
+Afterwards, comment out the same block of code in ImplimentSQL.cs and uncomment the block of code in Program.cs. Run the program and it should start up without any problems
+
+
+
+
