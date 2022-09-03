@@ -76,10 +76,24 @@ Clicking your name or the icon on the upper right will take you to user settings
 # Installation
 
 To install this program, you'll have to open up Git Bash in your ideal location. Then type this command down: <br>
-<code> git clone https://github.com/AndrewCollin32/HotPlate-Online-Restaurant.git </code>
+<code> git clone https://github.com/AndrewCollin32/HotPlate-Online-Restaurant.git </code> <br>
 It will automatically download everything into your prefered file. 
 
 # Setup_SQL
 
-MySQL is required for this program. You'll need to create a database first before you can use this program. 
+MySQL is required for this program. You'll need to create a database first before you can use this program.
+Once you created your database, you'll need these 4 items:
+<ul>
+  <li>Database Name</li>
+  <li>Server Name</li>
+  <li>Username</li>
+  <li>Password</li>
+</ul>
+
+Once you got them, you'll have to go to <code>HotPlateRestaurant/HotPlateBurger/ImplementSQL.cs</code>
+You should see this screen:
+
+![HotPlate SQLImplemntation Comment Off](https://user-images.githubusercontent.com/109395254/188287004-f2b0d16b-98e0-4719-a46c-659011638c2b.PNG)
+
+
 
