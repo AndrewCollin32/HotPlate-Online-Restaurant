@@ -24,15 +24,15 @@ namespace HotPlateBurger
                 Form1.basket.Remove(key[i]);
             }
 
-            Form1.gtotal = 0;
+            Form1.grandTotal = 0;
             Form1.total = 0;
 
-            Form1.cp = new checkoutPage();
-            Form1.switchPanel.Controls.Add(Form1.cp);
-            Form1.cp.Dock = DockStyle.Fill;
-            Form1.updateBasket();
-            Form1.previousPage = Form1.db;
-            Form1.db.BringToFront();
+            Form1.checkoutPage = new checkoutPage();
+            Form1.switchPanel.Controls.Add(Form1.checkoutPage);
+            Form1.checkoutPage.Dock = DockStyle.Fill;
+            Form1.UpdateTotalAndGrandTotal();
+            Form1.previousPage = Form1.dashboardPage;
+            Form1.dashboardPage.BringToFront();
         }
     }
 }

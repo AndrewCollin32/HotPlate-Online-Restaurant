@@ -80,7 +80,7 @@
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Hi, Jacob";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
+            this.nameLabel.Click += new System.EventHandler(this.NameLabelClick);
             // 
             // pictureBox2
             // 
@@ -93,7 +93,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.avatarLogoClick);
+            this.pictureBox2.Click += new System.EventHandler(this.AvatarLogoClick);
             // 
             // pictureBox1
             // 
@@ -105,7 +105,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.hotPlateLogoClick);
+            this.pictureBox1.Click += new System.EventHandler(this.HotPlateLogoClick);
             // 
             // panel2
             // 

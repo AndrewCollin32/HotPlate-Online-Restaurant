@@ -61,8 +61,8 @@ namespace HotPlateBurger
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1.previousPage = Form1.cp;
-            Form1.usp.BringToFront();
+            Form1.previousPage = Form1.checkoutPage;
+            Form1.userSettingsPage.BringToFront();
         }
 
         public static void updateCP()
@@ -124,7 +124,7 @@ namespace HotPlateBurger
             MySqlCommand cmd = new MySqlCommand("INSERT INTO ordertable VALUES(@confirmCode,@fullname,@total,@Time,@address,@email,@phone,@order);", conn);
             cmd.Parameters.AddWithValue("@confirmCode", confirmationCode);
             cmd.Parameters.AddWithValue("@fullname", FullNameTextbox.Text);
-            cmd.Parameters.AddWithValue("@total", "$" + Form1.gtotal.ToString("0.00"));
+            cmd.Parameters.AddWithValue("@total", "$" + Form1.grandTotal.ToString("0.00"));
             cmd.Parameters.AddWithValue("@order", order);
             cmd.Parameters.AddWithValue("@address", addressTextBox.Text);
             cmd.Parameters.AddWithValue("@email", emailTextBox.Text);
@@ -133,14 +133,14 @@ namespace HotPlateBurger
             cmd.ExecuteNonQuery();
 
             ConfirmationPage.confirmationNumberText.Text = "Your Confirmation Number: " + confirmationCode;
-            Form1.previousPage = Form1.conPage;
-            Form1.conPage.BringToFront();
+            Form1.previousPage = Form1.confirmationPage;
+            Form1.confirmationPage.BringToFront();
 
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Form1.db.BringToFront();
+            Form1.dashboardPage.BringToFront();
         }
         
 
@@ -186,7 +186,8 @@ namespace HotPlateBurger
         {
             Form1.tipPercentage = int.Parse(((string)tipBox.SelectedItem).Replace("%", ""));
             Debug.WriteLine(Form1.tipPercentage);
-            Form1.updateBasket();
+            Form1.UpdateTotalAndGrandTotal();
+            Form1.UpdateCheckoutPage();
         }
 
         private void cardNumberMaskedTextBox_Enter(object sender, EventArgs e)

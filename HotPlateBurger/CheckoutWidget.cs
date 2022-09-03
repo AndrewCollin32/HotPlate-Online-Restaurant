@@ -22,16 +22,17 @@ namespace HotPlateBurger
             itemID = id;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void deleteButtonClick(object sender, EventArgs e)
         {
             Form1.basket.Remove(itemID);
-            Form1.updateBasket();
+            Form1.UpdateTotalAndGrandTotal();
+            Form1.UpdateCheckoutPage();
             button.Text = "Add";
             button.BackColor = Color.Coral;
 
             if (Form1.basket.Count == 0)
             {
-                Form1.db.BringToFront();
+                Form1.dashboardPage.BringToFront();
             }
             
         }

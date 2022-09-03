@@ -32,10 +32,10 @@ namespace HotPlateBurger
         // You'll need to make a database first before you start the program.
         // Look below for further instructions
         
-        public static string SQLDatabaseName = "";
-        public static string SQLusername = "";
+        public static string SQLDatabaseName = "hotplaterestaurant";
+        public static string SQLusername = "root";
         public static string SQLPassword = "";
-        public static string SQLServer = "";
+        public static string SQLServer = "localhost";
         
         // Once you are done creating your database and inputting your information, you need to go to Program.CS
         // and comment out the main function. Then you need to go to ImplementSQL.cs and uncomment the static void main
@@ -73,7 +73,7 @@ namespace HotPlateBurger
         // Total - The calculated total before tax, tips and fees
         // gTotal (Grand Total) Calculated total after tax, tips and fees
         public static double total = 0;
-        public static double gtotal = 0;
+        public static double grandTotal = 0;
         
         //Switch Panel is the panel that is used to switch between UserSettings, Checkout, Dashboard and Confirmation Pages
         public static Panel switchPanel;
@@ -84,10 +84,10 @@ namespace HotPlateBurger
         public static double deliveryFee = 5.00;
 
         // User controls 
-        public static DashBoard db;
-        public static checkoutPage cp;
-        public static ConfirmationPage conPage;
-        public static UserSettingsPage usp;
+        public static DashBoard dashboardPage;
+        public static checkoutPage checkoutPage;
+        public static ConfirmationPage confirmationPage;
+        public static UserSettingsPage userSettingsPage;
 
         public static MySqlConnection SQLconn;
         
@@ -98,55 +98,84 @@ namespace HotPlateBurger
             InitializeComponent();
             basket = new Dictionary<string, object[]>();
             switchPanel = panelSwitch;
+            InitializeUserControls();
+            dashboardPage.BringToFront();
+        }
 
-            conPage = new ConfirmationPage();
-            db = new DashBoard();
-            cp = new checkoutPage();
-            usp = new UserSettingsPage();
-            panelSwitch.Controls.Add(cp);
-            panelSwitch.Controls.Add(db);
-            panelSwitch.Controls.Add(conPage);
-            panelSwitch.Controls.Add(usp);
-            cp.Dock = DockStyle.Fill;
-            db.Dock = DockStyle.Fill;
-            conPage.Dock = DockStyle.Fill;
-            usp.Dock = DockStyle.Fill;
-            db.BringToFront();
+        //Creates new usercontrols and calls addUserControlsToSwitchPanel
+        public static void InitializeUserControls()
+        {
+            confirmationPage = (ConfirmationPage) AddUserControlsToSwitchPanel(new ConfirmationPage());
+            dashboardPage = (DashBoard) AddUserControlsToSwitchPanel(new DashBoard());
+            checkoutPage = (checkoutPage) AddUserControlsToSwitchPanel(new checkoutPage());
+            userSettingsPage = (UserSettingsPage) AddUserControlsToSwitchPanel(new UserSettingsPage());
+        }
 
+        //Adds usercontrol form into switchpanel controls.
+        public static UserControl AddUserControlsToSwitchPanel(UserControl page)
+        {
+            switchPanel.Controls.Add(page);
+            page.Dock = DockStyle.Fill;
+            return page;
         }
 
         // The function updates the total and gTotal with all the items in the shopping basket.
         // This function will also alter the checkout page by adding widgets to the left and  
         // adding the calculated total to the labels.
-        public static void updateBasket()
+        
+        // public static void updateTotalAndGrandTotal()
+        // {
+        //     checkoutPage.checkoutLayout.Controls.Clear();
+        //     String orderTotal = "";
+        //     double total = 0;
+        //     string[] key = basket.Keys.ToArray();
+        //     for (int i = 0; i < key.Length; i++) {
+        //         total = (int) basket[key[i]][0] * (double) basket[key[i]][1] + total;
+        //         orderTotal = orderTotal + "\n" + basket[key[i]][0] + "x " + basket[key[i]][2] + " - $" + ((int) basket[key[i]][0] * (double) basket[key[i]][1]).ToString("0.00");
+        //         checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key[i]][0], (string) basket[key[i]][2], (string) basket[key[i]][3], (string) basket[key[i]][4], (Button)basket[key[i]][5]));
+        //     }
+        //
+        //     Form1.total = total;
+        //
+        //     DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
+        //     checkoutPage.orderTotalLabel.Text = orderTotal;
+        //
+        //     double grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
+        //     string totalCalculation = "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + taxAmount +
+        //                               "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
+        //     checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
+        //     checkoutPage.totalLabel.Text = totalCalculation;
+        //
+        //     totalAfterTaxAndTips = grandTotal;
+        // }
+        
+        //Updates the total and grandTotal
+        public static void UpdateTotalAndGrandTotal()
         {
-
-            checkoutPage.checkoutLayout.Controls.Clear();
-            String orderTotal = "";
             double total = 0;
-            string[] key = basket.Keys.ToArray();
-            for (int i = 0; i < key.Length; i++)
-            {
-                total = (int) basket[key[i]][0] * (double) basket[key[i]][1] + total;
-                orderTotal = orderTotal + "\n" + basket[key[i]][0] + "x " + basket[key[i]][2] + " - $" + ((int) basket[key[i]][0] * (double) basket[key[i]][1]).ToString("0.00");
-                checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key[i]][0], (string) basket[key[i]][2], (string) basket[key[i]][3], (string) basket[key[i]][4], (Button)basket[key[i]][5]));
-            }
-
+            foreach (string key in basket.Keys.ToArray()) {total = (int) basket[key][0] * (double) basket[key][1] + total;}
             Form1.total = total;
-
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
-            checkoutPage.orderTotalLabel.Text = orderTotal;
-
-            double grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
-            string totalCalculation = "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + taxAmount +
-                                      "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
-            checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
-            checkoutPage.totalLabel.Text = totalCalculation;
-
-            gtotal = grandTotal;
+            grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
         }
 
-        public static MySqlDataReader executeSQL(String command)
+        //Updates all the labels in the checkout page
+        public static void UpdateCheckoutPage()
+        {
+            checkoutPage.checkoutLayout.Controls.Clear();
+            String orderTotal = "";
+            foreach (string key in basket.Keys.ToArray()) {
+                orderTotal = orderTotal + "\n" + basket[key][0] + "x " + basket[key][2] + " - $" + ((int) basket[key][0] * (double) basket[key][1]).ToString("0.00");
+                checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key][0], (string) basket[key][2], (string) basket[key][3], (string) basket[key][4], (Button)basket[key][5]));
+            }
+            checkoutPage.orderTotalLabel.Text = orderTotal;
+            checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
+            checkoutPage.totalLabel.Text = "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + taxAmount +
+                                           "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
+        }
+
+        //Connects to the database and returns a SQLReader
+        public static MySqlDataReader ConnectToSql(String command)
         {
             MySqlConnection conn = new MySqlConnection("SERVER=" + SQLServer + ";DATABASE=" + SQLDatabaseName + ";UID=" + SQLusername + ";PASSWORD=" + SQLPassword + ";");
             conn.Open();
@@ -156,21 +185,21 @@ namespace HotPlateBurger
         }
 
         // Function that is triggered when you click on your profile picture. Takes you to the usersettings page.
-        private void avatarLogoClick(object sender, EventArgs e)
+        private void AvatarLogoClick(object sender, EventArgs e)
         {
-            usp.BringToFront();
+            userSettingsPage.BringToFront();
         }
 
         // Function that is triggered when you click on your name. Takes you to the usersettings page.
-        private void nameLabel_Click(object sender, EventArgs e)
+        private void NameLabelClick(object sender, EventArgs e)
         {
-            usp.BringToFront();
+            userSettingsPage.BringToFront();
         }
 
         // Function that is triggered when you click on your HotPlate Logo. Takes you to the dashboard page.
-        private void hotPlateLogoClick(object sender, EventArgs e)
+        private void HotPlateLogoClick(object sender, EventArgs e)
         {
-            db.BringToFront();
+            dashboardPage.BringToFront();
         }
     }
 }

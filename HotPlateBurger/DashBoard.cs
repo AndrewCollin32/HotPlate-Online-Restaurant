@@ -57,7 +57,7 @@ namespace HotPlateBurger
         //Loads all the widgets to the widgetArray from the SQL database.
         public void loadWidgets()
         {
-            MySqlDataReader reader = Form1.executeSQL("SELECT * FROM foodtable");
+            MySqlDataReader reader = Form1.ConnectToSql("SELECT * FROM foodtable");
             while (reader.Read())
             {
                 Widget w = new Widget("" + reader[2], "" + reader[3], "" + reader[4], "" + reader[1], "" + reader[0]);
@@ -185,31 +185,33 @@ namespace HotPlateBurger
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form1.updateBasket();
+            Form1.UpdateTotalAndGrandTotal();
             if (Form1.basket.Count == 0)
             {
                 new AlertBox("Cart Is Empty", "Can't open checkout page because your cart is empty").Show();
             }
             else
             {
-                Form1.previousPage = Form1.cp;
+                Form1.UpdateCheckoutPage();
+                Form1.previousPage = Form1.checkoutPage;
                 checkoutPage.updateCP();
-                Form1.cp.BringToFront();
+                Form1.checkoutPage.BringToFront();
             }
         }
 
         private void totalLabel_Click(object sender, EventArgs e)
         {
-            Form1.updateBasket();
+            Form1.UpdateTotalAndGrandTotal();
             if (Form1.basket.Count == 0)
             {
                 new AlertBox("Cart Is Empty", "Can't open checkout page because your cart is empty").Show();
             }
             else
             {
-                Form1.previousPage = Form1.cp;
+                Form1.UpdateCheckoutPage();
+                Form1.previousPage = Form1.checkoutPage;
                 checkoutPage.updateCP();
-                Form1.cp.BringToFront();
+                Form1.checkoutPage.BringToFront();
             }
         }
     }
