@@ -16,6 +16,10 @@ HotPlate Online is a simple program that allows customers to order food online a
     <li><a href = #User_Settings> User Settings </a></li>
   </ul>
   <li><a href = #setup>Setup</a></li>
+  <ul>
+    <li><a href = #Installation>Install</a></li>
+    <li><a href = #Setup_SQL> Setup SQL</a></li>
+  </ul>
 </ul>
 
 # Technologies
@@ -68,3 +72,14 @@ Once the check out page validates all of your input, it will bring you to the co
 Clicking your name or the icon on the upper right will take you to user settings. In user settings, you can change your address, your name, your email and your phone number. This is the only location where you can change your address. Additionally you can also give a note to the driver on how to access your property. By clicking the submit button, it will validate your input and save it to the program. 
 
 # Setup
+
+# Installation
+
+To install this program, you'll have to open up Git Bash in your ideal location. Then type this command down: <br>
+<code> git clone https://github.com/AndrewCollin32/HotPlate-Online-Restaurant.git </code>
+It will automatically download everything into your prefered file. 
+
+# Setup_SQL
+
+MySQL is required for this program. You'll need to create a database first before you can use this program. 
+
