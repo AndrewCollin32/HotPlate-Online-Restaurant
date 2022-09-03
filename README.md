@@ -90,6 +90,12 @@ Once you created your database, you'll need these 4 items:
   <li>Password</li>
 </ul>
 
+Once you got all the information, go to <code>HotplateRestaurant/HotPlateBurger/Windows.cs</code>. <br>
+Your screen should look like this:
+![HotPlateSQLSetup](https://user-images.githubusercontent.com/109395254/188287050-f712df96-81e5-4841-a7f2-f0f4246db80d.PNG)
+Enter down your database name, server name, username and password. 
+
+
 Once you got them, you'll have to go to <code>HotPlateRestaurant/HotPlateBurger/ImplementSQL.cs</code>
 You should see this screen:
 
