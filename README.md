@@ -81,6 +81,12 @@ It will automatically download everything into your prefered file.
 
 # Setup_SQL
 
+Steps:
+<ul>
+  <li>Build your database</li>
+  <li>Run ImplimentSQL.cs so it can automaically build your tables and insert data</li>
+  <li>Run Program.cs</li>
+<ul>
 MySQL is required for this program. You'll need to create a database first before you can use this program.
 Once you created your database, you'll need these 4 items:
 <ul>
@@ -96,10 +102,20 @@ Your screen should look like this:
 Enter down your database name, server name, username and password. 
 
 
-Once you got them, you'll have to go to <code>HotPlateRestaurant/HotPlateBurger/ImplementSQL.cs</code>
-You should see this screen:
-
+Then go to <code>HotPlateRestaurant/HotPlateBurger/ImplementSQL.cs</code> You should see this screen:
 ![HotPlate SQLImplemntation Comment Off](https://user-images.githubusercontent.com/109395254/188287004-f2b0d16b-98e0-4719-a46c-659011638c2b.PNG)
+Uncomment the block of code. Your code should look like this after:
+![HotPlateSQL Implementation Comment Off](https://user-images.githubusercontent.com/109395254/188287236-aca6b690-8b75-4c0a-ac42-32432b3bf609.PNG)
+Noticed that once you uncomment your code, it started to show an error in your IDE. Don't worry, there is one extra step you have to do. 
+This error occurs when there are more than one entry points. You'll need to go to <code>HotPlateRestaurant/HotPlateBurger/Program.cs</code>. You should see this screen:
+![Hotplate Program  cs Comment On](https://user-images.githubusercontent.com/109395254/188287287-ec41581c-cca4-4d4f-b277-ff79b859c2f1.PNG)
+Uncomment the block of code. Your code should look like this:
+![HotPlate Program comment on](https://user-images.githubusercontent.com/109395254/188287298-c31f5d52-946e-42ed-85b5-eeed3f0a911b.PNG)
+<br>
+Now the program is running. ImplimentSQL.cs should run. After it is finished, you can double check your database to see if there are two tables in there. The two tables are named: foodtable and ordertable.
+
+Afterwards, comment out the same block of code in ImplimentSQL.cs and uncomment the block of code in Program.cs. Run the program and it should start up without any problems
+
 
 
 
