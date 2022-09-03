@@ -5,9 +5,22 @@ namespace HotPlateBurger
 {
     public partial class UserSettingsPage : UserControl
     {
+        public static string[] stateArray =
+        {
+            "AL", "AK", "AZ", "AR", "AS", "CA", "CO", "CT", "DE", "DC", "FL","GA",
+            "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO","MT",
+            "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "CM", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
+            "TN", "TX", "TT", "UT", "VT", "VA", "VI", "WA", "WV", "WI", "WY"
+        };
         public UserSettingsPage()
         {
             InitializeComponent();
+
+            stateComboBox.Items.Add("AL");
+            foreach (string s in stateArray)
+            {
+                stateComboBox.Items.Add(s);
+            }
             fillEverything();
         }
 
@@ -19,7 +32,7 @@ namespace HotPlateBurger
 
             companyTextBox.Text = Form1.userCompany;
             addressTextBox.Text = Form1.userAddressline;
-            stateTextbox.Text = Form1.userState;
+            stateComboBox.Text = Form1.userState;
             cityTextBox.Text = Form1.userCity;
             postalCodeTextBox.Text = Form1.userPostalNumber;
             notesTextBox.Text = Form1.userNotes;

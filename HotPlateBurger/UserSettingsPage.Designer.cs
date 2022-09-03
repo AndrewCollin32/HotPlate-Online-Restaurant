@@ -35,6 +35,7 @@ namespace HotPlateBurger
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.stateComboBox = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace HotPlateBurger
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.notesTextBox = new System.Windows.Forms.RichTextBox();
-            this.stateTextbox = new System.Windows.Forms.TextBox();
             this.postalCodeTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.companyTextBox = new System.Windows.Forms.TextBox();
@@ -83,6 +83,7 @@ namespace HotPlateBurger
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.stateComboBox);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
@@ -91,7 +92,6 @@ namespace HotPlateBurger
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.notesTextBox);
-            this.panel3.Controls.Add(this.stateTextbox);
             this.panel3.Controls.Add(this.postalCodeTextBox);
             this.panel3.Controls.Add(this.cityTextBox);
             this.panel3.Controls.Add(this.companyTextBox);
@@ -113,6 +113,15 @@ namespace HotPlateBurger
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(737, 738);
             this.panel3.TabIndex = 2;
+            // 
+            // stateComboBox
+            // 
+            this.stateComboBox.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stateComboBox.FormattingEnabled = true;
+            this.stateComboBox.Location = new System.Drawing.Point(222, 537);
+            this.stateComboBox.Name = "stateComboBox";
+            this.stateComboBox.Size = new System.Drawing.Size(169, 28);
+            this.stateComboBox.TabIndex = 38;
             // 
             // label13
             // 
@@ -199,16 +208,6 @@ namespace HotPlateBurger
             this.notesTextBox.Size = new System.Drawing.Size(220, 217);
             this.notesTextBox.TabIndex = 30;
             this.notesTextBox.Text = "Notes (Optional)";
-            // 
-            // stateTextbox
-            // 
-            this.stateTextbox.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stateTextbox.ForeColor = System.Drawing.Color.Black;
-            this.stateTextbox.Location = new System.Drawing.Point(222, 535);
-            this.stateTextbox.Name = "stateTextbox";
-            this.stateTextbox.Size = new System.Drawing.Size(251, 32);
-            this.stateTextbox.TabIndex = 29;
-            this.stateTextbox.Text = "State";
             // 
             // postalCodeTextBox
             // 
@@ -332,6 +331,7 @@ namespace HotPlateBurger
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.Coral;
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,6 +346,7 @@ namespace HotPlateBurger
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.Color.Coral;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -395,6 +396,8 @@ namespace HotPlateBurger
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.ComboBox stateComboBox;
+
         private System.Windows.Forms.Label label13;
 
         private System.Windows.Forms.Label label8;
@@ -405,7 +408,6 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.Label label7;
 
-        private System.Windows.Forms.TextBox stateTextbox;
         private System.Windows.Forms.RichTextBox notesTextBox;
 
         private System.Windows.Forms.TextBox cityTextBox;
