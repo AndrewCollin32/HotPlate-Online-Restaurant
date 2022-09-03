@@ -86,7 +86,7 @@ Steps:
   <li>Build your database</li>
   <li>Run ImplimentSQL.cs so it can automaically build your tables and insert data</li>
   <li>Run Program.cs</li>
-<ul>
+</ul>
 MySQL is required for this program. You'll need to create a database first before you can use this program.
 Once you created your database, you'll need these 4 items:
 <ul>
