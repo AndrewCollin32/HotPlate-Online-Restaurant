@@ -9,9 +9,13 @@ namespace HotPlateBurger
     //This is the checkout widget. It is the widget that is generated when you are in the checkout page on the left.
     public partial class CheckoutWidget : UserControl
     {
-
+        //--------------------------------------------------------------------------------------------------------------
+        //Global Variables
         public string itemID;
         public Button button;
+        
+        //--------------------------------------------------------------------------------------------------------------
+        //Initialize Checkout Widget
         public CheckoutWidget(int amount, string title, string picture, string id, Button button)
         {
             InitializeComponent();
@@ -22,19 +26,23 @@ namespace HotPlateBurger
             itemID = id;
         }
 
-        private void deleteButtonClick(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------
+        //Deletes an item from the basket and resets it's button
+        public void DeleteAnItem()
         {
-            Form1.basket.Remove(itemID);
-            Form1.UpdateTotalAndGrandTotal();
-            Form1.UpdateCheckoutPage();
+            HotPlateData.basket.Remove(itemID);
+            HotPlateData.UpdateTotalAndGrandTotal();
+            HotPlateData.UpdateCheckoutPage();
             button.Text = "Add";
             button.BackColor = Color.Coral;
-
-            if (Form1.basket.Count == 0)
-            {
-                Form1.dashboardPage.BringToFront();
-            }
-            
         }
+        //--------------------------------------------------------------------------------------------------------------
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteAnItem();
+            if (HotPlateData.basket.Count == 0) HotPlateData.dashboardPage.BringToFront();
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
     }
 }

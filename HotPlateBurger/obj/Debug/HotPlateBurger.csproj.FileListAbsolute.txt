@@ -273,7 +273,6 @@ C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\D
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.CheckoutWidget.resources
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.ConfirmationPage.resources
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.DashBoard.resources
-C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.Form1.resources
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.Properties.Resources.resources
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.UserSettingsPage.resources
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.Widget.resources
@@ -282,3 +281,4 @@ C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\D
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.csproj.CopyComplete
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.exe
 C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.pdb
+C:\Users\Syste\RiderProjects\HotPlate-Online-Restaurantetet\HotPlateBurger\obj\Debug\HotPlateBurger.HotPlateData.resources

@@ -7,32 +7,49 @@ namespace HotPlateBurger
 {
     public partial class ConfirmationPage : UserControl
     {
+        //--------------------------------------------------------------------------------------------------------------
+        //Stores the confirmation number to display it on the page
         public static Label confirmationNumberText;
+        
+        //--------------------------------------------------------------------------------------------------------------
+        // Initialize the confirmation page. Assigns the confirmation label to global variable
         public ConfirmationPage()
         {
             InitializeComponent();
             confirmationNumberText = confirmationNumberLabel;
         }
-
-        private void okButtonClick(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------
+        //Resets total and grandTotal to 0
+        public static void DeleteAllOrderData()
         {
-            String[] key = Form1.basket.Keys.ToArray();
+            HotPlateData.grandTotal = 0;
+            HotPlateData.total = 0;
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        //Resets all widget buttons to it's original state
+        public static void ResetAllWidgetButtons()
+        {
+            String[] key = HotPlateData.basket.Keys.ToArray();
             for (int i = 0; i < key.Length; i++)
             {
-                ((Button)Form1.basket[key[i]][5]).Text = "Add";
-                ((Button)Form1.basket[key[i]][5]).BackColor = Color.Coral;
-                Form1.basket.Remove(key[i]);
+                ((Button)HotPlateData.basket[key[i]][5]).Text = "Add";
+                ((Button)HotPlateData.basket[key[i]][5]).BackColor = Color.Coral;
+                HotPlateData.basket.Remove(key[i]);
             }
-
-            Form1.grandTotal = 0;
-            Form1.total = 0;
-
-            Form1.checkoutPage = new checkoutPage();
-            Form1.switchPanel.Controls.Add(Form1.checkoutPage);
-            Form1.checkoutPage.Dock = DockStyle.Fill;
-            Form1.UpdateTotalAndGrandTotal();
-            Form1.previousPage = Form1.dashboardPage;
-            Form1.dashboardPage.BringToFront();
         }
+        
+        //--------------------------------------------------------------------------------------------------------------
+        private void okButton_Click(object sender, EventArgs e)
+        {
+
+            ResetAllWidgetButtons();
+            DeleteAllOrderData();
+            HotPlateData.checkoutPage = (checkoutPage) HotPlateData.AddUserControlsToSwitchPanel(new checkoutPage());
+            HotPlateData.previousPage = HotPlateData.dashboardPage;
+            HotPlateData.dashboardPage.BringToFront();
+        }
+        
+        //--------------------------------------------------------------------------------------------------------------
     }
 }

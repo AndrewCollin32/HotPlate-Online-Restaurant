@@ -9,12 +9,15 @@ namespace HotPlateBurger
         // Make sure that you have comment out the main function in Program.cs. 
         // Then uncomment the static void main function here.
 
+        //--------------------------------------------------------------------------------------------------------------
+        
         //Comment begin here!
         
         // static void Main()
         // {
         //     MySqlConnection conn =
-        //         new MySqlConnection("SERVER=" + Form1.SQLServer + ";DATABASE=" + Form1.SQLDatabaseName + ";UID=" + Form1.SQLusername + ";PASSWORD=" + Form1.SQLPassword + ";");
+        //         new MySqlConnection("SERVER=" + HotPlateData.SQLServer + ";DATABASE=" + HotPlateData.SQLDatabaseName + 
+        //                             ";UID=" + HotPlateData.SQLusername + ";PASSWORD=" + HotPlateData.SQLPassword + ";");
         //     conn.Open();
         //     createTable(conn);
         //     insertSampleMenu(conn);
@@ -22,6 +25,9 @@ namespace HotPlateBurger
         // }
         
         // Comment ends here!
+        
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         
         // Creates two tables in your mySQL database. 
@@ -65,6 +71,7 @@ namespace HotPlateBurger
             cmd.ExecuteNonQuery();
         }
         
+        //--------------------------------------------------------------------------------------------------------------
         // Deletes the two tables and all the data
         static void deleteEverything(MySqlConnection conn)
         {
@@ -74,6 +81,7 @@ namespace HotPlateBurger
                 .ExecuteNonQuery();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         // Inserts a sample menu to foodtable.
         static void insertSampleMenu(MySqlConnection conn)
         {
@@ -187,5 +195,6 @@ namespace HotPlateBurger
                 "INSERT INTO foodtable VALUES ('de','32','Soft Served Ice Cream','2.00','softServeIceCream')",
                 conn)).ExecuteNonQuery();
         }
+        //--------------------------------------------------------------------------------------------------------------
     }
 }

@@ -39,7 +39,7 @@ namespace HotPlateBurger
             this.totalLabelString = new System.Windows.Forms.Label();
             this.tipBox = new System.Windows.Forms.ComboBox();
             this.FullNameTextbox = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.creditCardPicture = new System.Windows.Forms.PictureBox();
             this.cwTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
@@ -66,7 +66,7 @@ namespace HotPlateBurger
             this.panel4 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.creditCardPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,7 +82,7 @@ namespace HotPlateBurger
             this.panel1.Controls.Add(this.totalLabelString);
             this.panel1.Controls.Add(this.tipBox);
             this.panel1.Controls.Add(this.FullNameTextbox);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.creditCardPicture);
             this.panel1.Controls.Add(this.cwTextBox);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.emailTextBox);
@@ -179,14 +179,14 @@ namespace HotPlateBurger
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(510, 500);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(274, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.creditCardPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.creditCardPicture.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.creditCardPicture.Location = new System.Drawing.Point(510, 500);
+            this.creditCardPicture.Name = "creditCardPicture";
+            this.creditCardPicture.Size = new System.Drawing.Size(274, 34);
+            this.creditCardPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.creditCardPicture.TabIndex = 16;
+            this.creditCardPicture.TabStop = false;
             // 
             // cwTextBox
             // 
@@ -335,7 +335,7 @@ namespace HotPlateBurger
             this.button2.TabIndex = 6;
             this.button2.Text = "Change";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.changeAddressButton_Click);
             // 
             // label5
             // 
@@ -404,7 +404,7 @@ namespace HotPlateBurger
             this.button1.TabIndex = 0;
             this.button1.Text = "Place Order";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.placeOrderButton_Click);
             // 
             // panel2
             // 
@@ -482,7 +482,7 @@ namespace HotPlateBurger
             this.Size = new System.Drawing.Size(1337, 738);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.creditCardPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -502,7 +502,7 @@ namespace HotPlateBurger
 
         private System.Windows.Forms.TextBox FullNameTextbox;
 
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox creditCardPicture;
 
         private System.Windows.Forms.TextBox cwTextBox;
 

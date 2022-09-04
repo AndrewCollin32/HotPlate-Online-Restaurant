@@ -10,7 +10,7 @@ namespace HotPlateBurger
     //The dashboard user controls form is the main page that features all the different category buttons
     public partial class DashBoard : UserControl
     {
-
+        //--------------------------------------------------------------------------------------------------------------
         //The label that displays the total in the bottom left
         public static Label labelWithTotal;
 
@@ -24,6 +24,7 @@ namespace HotPlateBurger
         // Array that carries every food card that was loaded from the database
         public ArrayList widgetArray;
         
+        //--------------------------------------------------------------------------------------------------------------
         //Initialize the Dashboard User Controls Panel
         //Loads all the widgets to AllFrame.cs
         public DashBoard()
@@ -37,12 +38,13 @@ namespace HotPlateBurger
             loadForm(allFrame);
 
             loadWidgets();
-            loadWidgetForFrame("a");
+            LoadWidgetForFrame("a");
             
             allFrame.BringToFront();
 
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Function made specifically to load AllFrame.cs
         public void loadForm(Object form)
         {
@@ -54,165 +56,111 @@ namespace HotPlateBurger
             f.Show();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Loads all the widgets to the widgetArray from the SQL database.
         public void loadWidgets()
         {
-            MySqlDataReader reader = Form1.ConnectToSql("SELECT * FROM foodtable");
+            MySqlDataReader reader = HotPlateData.ConnectToSql("SELECT * FROM foodtable");
             while (reader.Read())
             {
                 Widget w = new Widget(reader);
                 widgetArray.Add(w);
             }
-            Form1.SQLconn.Close();
+            HotPlateData.SQLconn.Close();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Adds the proper widgets to AllFrame flowlayoutpanel from the widgetArray to the specified category.
-        public void loadWidgetForFrame(string category)
+        public void LoadWidgetForFrame(string category)
         {
-            switch (category)
+            for (int i = 0; i < widgetArray.Count; i++)
             {
-                case "a":
-                    for (int i = 0; i < widgetArray.Count; i++)
-                    {
-                        allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
-                    }
-                    break;
-                case "b":
-                    for (int i = 0; i < widgetArray.Count; i++)
-                    {
-                        if (((Widget)widgetArray[i]).category == "b")
-                        {
-                            allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
-                        }
-                    }
-                    break;
-                case "c":
-                    for (int i = 0; i < widgetArray.Count; i++)
-                    {
-                        if (((Widget)widgetArray[i]).category == "c")
-                        {
-                            allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
-                        }
-                    }
-                    break;
-                case "s":
-                    for (int i = 0; i < widgetArray.Count; i++)
-                    {
-                        if (((Widget)widgetArray[i]).category == "s")
-                        {
-                            allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
-                        }
-                    }
-                    break;
-                case "d":
-                    for (int i = 0; i < widgetArray.Count; i++)
-                    {
-                        if (((Widget)widgetArray[i]).category == "d")
-                        {
-                            allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
-                        }
-                    }
-                    break;
-                case "de":
-                    for (int i = 0; i < widgetArray.Count; i++)
-                    {
-                        if (((Widget)widgetArray[i]).category == "de")
-                        {
-                            allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
-                        }
-                    }
-                    break;
-                    
-            }
-            {
-                
+                if (((Widget)widgetArray[i]).category == category || category == "a")
+                {
+                    allFrame.flowLayoutPanel.Controls.Add((Widget)widgetArray[i]);
+                }
             }
         }
 
-        private void allButton_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------
+        // Updates previous button status and assigns current button to previous button
+        public void UpdateButton(Button button, string category)
         {
             previousButton.BackColor = Color.Coral;
             allButton.BackColor = Color.SandyBrown;
             allFrame.flowLayoutPanel.Controls.Clear();
-            loadWidgetForFrame("a");
-            previousButton = allButton;
+            LoadWidgetForFrame(category);
+            previousButton = button;
+        }
+        //--------------------------------------------------------------------------------------------------------------
+        private void allButton_Click(object sender, EventArgs e)
+        {
+           UpdateButton(allButton, "a");
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         private void burgerButton_Click(object sender, EventArgs e)
         {
-            previousButton.BackColor = Color.Coral;
-            burgerButton.BackColor = Color.SandyBrown;
-            allFrame.flowLayoutPanel.Controls.Clear();
-            loadWidgetForFrame("b");
-            previousButton = burgerButton;
+            UpdateButton(burgerButton, "b");
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         private void chickenButton_Click(object sender, EventArgs e)
         {
-            previousButton.BackColor = Color.Coral;
-            chickenButton.BackColor = Color.SandyBrown;
-            allFrame.flowLayoutPanel.Controls.Clear();
-            loadWidgetForFrame("c");
-            previousButton = chickenButton;
+            UpdateButton(chickenButton, "c");
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         private void sidesButton_Click(object sender, EventArgs e)
         {
-            previousButton.BackColor = Color.Coral;
-            sidesButton.BackColor = Color.SandyBrown;
-            allFrame.flowLayoutPanel.Controls.Clear();
-            loadWidgetForFrame("s");
-            previousButton = sidesButton;
+            UpdateButton(sidesButton, "s");
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         private void drinkButton_Click(object sender, EventArgs e)
         {
-            previousButton.BackColor = Color.Coral;
-            drinkButton.BackColor = Color.SandyBrown;
-            allFrame.flowLayoutPanel.Controls.Clear();
-            loadWidgetForFrame("d");
-            previousButton = drinkButton;
+            UpdateButton(drinkButton, "d");
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         private void dessertsButton_Click(object sender, EventArgs e)
         {
-            previousButton.BackColor = Color.Coral;
-            dessertsButton.BackColor = Color.SandyBrown;
-            allFrame.flowLayoutPanel.Controls.Clear();
-            loadWidgetForFrame("de");
-            previousButton = dessertsButton;
+            UpdateButton(dessertsButton, "de");
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------
+        private void shoppingCartIcon_Click(object sender, EventArgs e)
         {
-            Form1.UpdateTotalAndGrandTotal();
-            if (Form1.basket.Count == 0)
+            HotPlateData.UpdateTotalAndGrandTotal();
+            if (HotPlateData.basket.Count == 0)
             {
                 new AlertBox("Cart Is Empty", "Can't open checkout page because your cart is empty").Show();
             }
             else
             {
-                Form1.UpdateCheckoutPage();
-                Form1.previousPage = Form1.checkoutPage;
-                checkoutPage.updateCP();
-                Form1.checkoutPage.BringToFront();
+                HotPlateData.UpdateCheckoutPage();
+                HotPlateData.previousPage = HotPlateData.checkoutPage;
+                checkoutPage.UpdateCheckOutLabels();
+                HotPlateData.checkoutPage.BringToFront();
             }
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         private void totalLabel_Click(object sender, EventArgs e)
         {
-            Form1.UpdateTotalAndGrandTotal();
-            if (Form1.basket.Count == 0)
+            HotPlateData.UpdateTotalAndGrandTotal();
+            if (HotPlateData.basket.Count == 0)
             {
                 new AlertBox("Cart Is Empty", "Can't open checkout page because your cart is empty").Show();
             }
             else
             {
-                Form1.UpdateCheckoutPage();
-                Form1.previousPage = Form1.checkoutPage;
-                checkoutPage.updateCP();
-                Form1.checkoutPage.BringToFront();
+                HotPlateData.UpdateCheckoutPage();
+                HotPlateData.previousPage = HotPlateData.checkoutPage;
+                checkoutPage.UpdateCheckOutLabels();
+                HotPlateData.checkoutPage.BringToFront();
             }
         }
+        //--------------------------------------------------------------------------------------------------------------
     }
 }

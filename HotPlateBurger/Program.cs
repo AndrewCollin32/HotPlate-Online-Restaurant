@@ -16,6 +16,7 @@ namespace HotPlateBurger
         /// The main entry point for the application.
         /// </summary>
 
+        //--------------------------------------------------------------------------------------------------------------
         //Comment begins here
         
         [STAThread]
@@ -23,9 +24,10 @@ namespace HotPlateBurger
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new HotPlateData());
         }
         
         //Comment ends here
+        //--------------------------------------------------------------------------------------------------------------
     }
 }

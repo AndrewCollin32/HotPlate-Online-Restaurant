@@ -1,6 +1,6 @@
 ﻿namespace HotPlateBurger
 {
-    partial class Form1
+    partial class HotPlateData
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotPlateData));
             this.panel1 = new System.Windows.Forms.Panel();
             this.restaurantName = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(600, 645);
-            this.Name = "Form1";
+            this.Name = "HotPlateData";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

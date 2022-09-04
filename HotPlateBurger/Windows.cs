@@ -24,7 +24,7 @@ using MySql.Data.MySqlClient;
 // - PreviousPage.cs - This variable is only used for users accessing UserSettings. 
 namespace HotPlateBurger
 {
-    public partial class Form1 : Form
+    public partial class HotPlateData : Form
     {
         //--------------------------------------------------------------------------------------------------------------
         // SQL SETUP
@@ -92,9 +92,9 @@ namespace HotPlateBurger
 
         public static MySqlConnection SQLconn;
         
-        
+        //--------------------------------------------------------------------------------------------------------------
         // Function to initialize Form1. It also initializes the user control pages and add them to panelSwitch.
-        public Form1()
+        public HotPlateData()
         {
             InitializeComponent();
             basket = new Dictionary<string, object[]>();
@@ -103,6 +103,7 @@ namespace HotPlateBurger
             dashboardPage.BringToFront();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Creates new usercontrols and calls addUserControlsToSwitchPanel
         public static void InitializeUserControls()
         {
@@ -112,6 +113,7 @@ namespace HotPlateBurger
             userSettingsPage = (UserSettingsPage) AddUserControlsToSwitchPanel(new UserSettingsPage());
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Adds usercontrol form into switchpanel controls.
         public static UserControl AddUserControlsToSwitchPanel(UserControl page)
         {
@@ -120,6 +122,7 @@ namespace HotPlateBurger
             return page;
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Updates the total and grandTotal
         public static void UpdateTotalAndGrandTotal()
         {
@@ -128,11 +131,12 @@ namespace HotPlateBurger
             {
                 total = (int) basket[key][0] * (double) basket[key][1] + total;
             }
-            Form1.total = total;
+            HotPlateData.total = total;
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
             grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Updates all the labels in the checkout page
         public static void UpdateCheckoutPage()
         {
@@ -157,6 +161,7 @@ namespace HotPlateBurger
                 "\n$" + grandTotal.ToString("0.00");
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         //Connects to the database and returns a SQLReader
         public static MySqlDataReader ConnectToSql(String command)
         {
@@ -170,22 +175,27 @@ namespace HotPlateBurger
             return cmd.ExecuteReader();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         // Function that is triggered when you click on your profile picture. Takes you to the usersettings page.
         private void AvatarLogoClick(object sender, EventArgs e)
         {
             userSettingsPage.BringToFront();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         // Function that is triggered when you click on your name. Takes you to the usersettings page.
         private void NameLabelClick(object sender, EventArgs e)
         {
             userSettingsPage.BringToFront();
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         // Function that is triggered when you click on your HotPlate Logo. Takes you to the dashboard page.
         private void HotPlateLogoClick(object sender, EventArgs e)
         {
             dashboardPage.BringToFront();
         }
+        
+        //--------------------------------------------------------------------------------------------------------------
     }
 }
