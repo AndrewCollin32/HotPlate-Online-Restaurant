@@ -4,6 +4,8 @@
 
 HotPlate Online is a simple program that allows customers to order food online and have it delivered. At the moment, this program only works for Windows operating systems, but there are plans to expand to Android, IOS and MacOS. Software and illustrations was created by Andrew Collin (<a href = https://github.com/AndrewCollin32> Link </a>) 
 
+(This is my submission to GeTS E-Commerce Challenge Hackathon)
+
 # Table of Contents
 <hr>
 <ul>
