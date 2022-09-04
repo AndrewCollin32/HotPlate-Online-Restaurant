@@ -31,6 +31,7 @@ namespace HotPlateBurger
         // This is where you will input your information to connect to your MySQL database.
         // You'll need to make a database first before you start the program.
         // Look below for further instructions
+        // TODO: Enter your SQL Information
         
         public static string SQLDatabaseName = "hotplaterestaurant";
         public static string SQLusername = "root";
@@ -119,41 +120,14 @@ namespace HotPlateBurger
             return page;
         }
 
-        // The function updates the total and gTotal with all the items in the shopping basket.
-        // This function will also alter the checkout page by adding widgets to the left and  
-        // adding the calculated total to the labels.
-        
-        // public static void updateTotalAndGrandTotal()
-        // {
-        //     checkoutPage.checkoutLayout.Controls.Clear();
-        //     String orderTotal = "";
-        //     double total = 0;
-        //     string[] key = basket.Keys.ToArray();
-        //     for (int i = 0; i < key.Length; i++) {
-        //         total = (int) basket[key[i]][0] * (double) basket[key[i]][1] + total;
-        //         orderTotal = orderTotal + "\n" + basket[key[i]][0] + "x " + basket[key[i]][2] + " - $" + ((int) basket[key[i]][0] * (double) basket[key[i]][1]).ToString("0.00");
-        //         checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key[i]][0], (string) basket[key[i]][2], (string) basket[key[i]][3], (string) basket[key[i]][4], (Button)basket[key[i]][5]));
-        //     }
-        //
-        //     Form1.total = total;
-        //
-        //     DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
-        //     checkoutPage.orderTotalLabel.Text = orderTotal;
-        //
-        //     double grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
-        //     string totalCalculation = "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + taxAmount +
-        //                               "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
-        //     checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
-        //     checkoutPage.totalLabel.Text = totalCalculation;
-        //
-        //     totalAfterTaxAndTips = grandTotal;
-        // }
-        
         //Updates the total and grandTotal
         public static void UpdateTotalAndGrandTotal()
         {
             double total = 0;
-            foreach (string key in basket.Keys.ToArray()) {total = (int) basket[key][0] * (double) basket[key][1] + total;}
+            foreach (string key in basket.Keys.ToArray())
+            {
+                total = (int) basket[key][0] * (double) basket[key][1] + total;
+            }
             Form1.total = total;
             DashBoard.labelWithTotal.Text = "Total: $" + total.ToString("0.00");
             grandTotal = ((total) * tipPercentage / 100) + ((total) * taxAmount / 100) + total + deliveryFee;
@@ -165,19 +139,31 @@ namespace HotPlateBurger
             checkoutPage.checkoutLayout.Controls.Clear();
             String orderTotal = "";
             foreach (string key in basket.Keys.ToArray()) {
-                orderTotal = orderTotal + "\n" + basket[key][0] + "x " + basket[key][2] + " - $" + ((int) basket[key][0] * (double) basket[key][1]).ToString("0.00");
-                checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget((int) basket[key][0], (string) basket[key][2], (string) basket[key][3], (string) basket[key][4], (Button)basket[key][5]));
+
+                orderTotal = orderTotal + 
+                             "\n" + basket[key][0] + "x " + basket[key][2] + " - $" + 
+                             ((int) basket[key][0] * (double) basket[key][1]).ToString("0.00");
+
+                checkoutPage.checkoutLayout.Controls.Add(new CheckoutWidget(
+                    (int) basket[key][0], (string) basket[key][2], (string) basket[key][3], 
+                    (string) basket[key][4], (Button)basket[key][5]));
+                
             }
             checkoutPage.orderTotalLabel.Text = orderTotal;
             checkoutPage.totalLabelSingle.Text = "Total: $" + grandTotal.ToString("0.00");
-            checkoutPage.totalLabel.Text = "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + taxAmount +
-                                           "%\n$" + deliveryFee.ToString("0.00") + "\n$" + grandTotal.ToString("0.00");
+            checkoutPage.totalLabel.Text = 
+                "$" + total.ToString("0.00") + "\n" + tipPercentage + "%\n" + 
+                taxAmount + "%\n$" + deliveryFee.ToString("0.00") + 
+                "\n$" + grandTotal.ToString("0.00");
         }
 
         //Connects to the database and returns a SQLReader
         public static MySqlDataReader ConnectToSql(String command)
         {
-            MySqlConnection conn = new MySqlConnection("SERVER=" + SQLServer + ";DATABASE=" + SQLDatabaseName + ";UID=" + SQLusername + ";PASSWORD=" + SQLPassword + ";");
+            MySqlConnection conn = new MySqlConnection(
+                "SERVER=" + SQLServer + ";DATABASE=" + SQLDatabaseName + 
+                ";UID=" + SQLusername + ";PASSWORD=" + SQLPassword + ";");
+            
             conn.Open();
             SQLconn = conn;
             MySqlCommand cmd = new MySqlCommand(command, conn);

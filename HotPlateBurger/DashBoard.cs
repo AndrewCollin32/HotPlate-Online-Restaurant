@@ -60,7 +60,7 @@ namespace HotPlateBurger
             MySqlDataReader reader = Form1.ConnectToSql("SELECT * FROM foodtable");
             while (reader.Read())
             {
-                Widget w = new Widget("" + reader[2], "" + reader[3], "" + reader[4], "" + reader[1], "" + reader[0]);
+                Widget w = new Widget(reader);
                 widgetArray.Add(w);
             }
             Form1.SQLconn.Close();

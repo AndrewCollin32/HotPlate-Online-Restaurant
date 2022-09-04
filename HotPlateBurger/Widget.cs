@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HotPlateBurger
 {
@@ -15,35 +16,37 @@ namespace HotPlateBurger
         public string picture;
         public string id;
         public string category;
-        public static Button addItemButton;
-        public Widget(string title, string price, string picture, string id, string category)
+        
+        // Creates a new widget 
+        public Widget(MySqlDataReader reader)
         {
-            this.id = id;
-            this.price = price;
-            this.title = title;
-            this.picture = picture;
-            this.category = category;
+            id = (string) reader[2];
+            price = (string) reader[3];
+            title = (string) reader[4];
+            picture = (string) reader[1];
+            category = (string) reader[0];
+            
             InitializeComponent(title, price, picture);
-            addItemButton = addButton;
-            this.Margin = new Padding(30, 30, 30, 30);
+            
+            Margin = new Padding(30, 30, 30, 30);
+            
             if (Form1.basket.ContainsKey(id))
             {
                 addButton.BackColor = Color.SandyBrown;
                 addButton.Text = "Add More";
             }
         }
-
+        
         private void addButton_Click(object sender, EventArgs e)
         {
-            //new AddItemFrame(title, picture).Show();
             Form1.total += Double.Parse(price);
             DashBoard.labelWithTotal.Text = "Total: $" + Form1.total.ToString("0.00");
             addButton.BackColor = Color.SandyBrown;
             addButton.Text = "Add More";
-            addItem(id, Double.Parse(price), title, picture, addButton);
+            AddItem(id, Double.Parse(price), title, picture, addButton);
         }
 
-        public static void addItem(string id, double price, string title, string picture, Button button)
+        public static void AddItem(string id, double price, string title, string picture, Button button)
         {
             if (Form1.basket.ContainsKey(id))
             {
@@ -54,16 +57,6 @@ namespace HotPlateBurger
                 Form1.basket.Add(id, new object[]{1, price, title, picture, id, button});
             }
         }
-
-        public static void printDebug()
-        {
-            Debug.WriteLine("------------------------------------------------------------------------------------");
-            string[] key =  Form1.basket.Keys.ToArray();
-            for (int i = 0; i < key.Length; i++)
-            {
-                Debug.WriteLine(Form1.basket[key[i]][0]);
-            }
-            
-        }
+        
     }
 }
