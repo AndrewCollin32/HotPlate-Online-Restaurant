@@ -118,6 +118,10 @@ Now the program is running. ImplimentSQL.cs should run. After it is finished, yo
 
 Afterwards, comment out the same block of code in ImplimentSQL.cs and uncomment the block of code in Program.cs. Run the program and it should start up without any problems
 
+# Future_Plans
+- Add Unit Tests
+- Add Log management system
+
 
 
 
